@@ -20,18 +20,8 @@ body {
   color: gray; }
   body.menu-show {
     overflow: hidden;
-    position: fixed;
-    height: 100%;
     width: 100%; }
 
-#colorlib-wrapper {
-  height: 100%;
-  width: 100%;
-  overflow: hidden; }
-  #colorlib-wrapper > div {
-    width: 100%;
-    height: 100%;
-    overflow-y: hidden; }
 
 a {
   color: #de9c79;
@@ -52,6 +42,13 @@ p, span {
 ul, ol {
   display: block;
   margin-bottom: 1.5em; }
+  @media screen and (max-width: 768px) {
+    ul, ol  {
+      padding-bottom: 0.5em;
+      margin-bottom: 0;
+    }
+  }
+  
 
 span {
   font-size: 18px;
@@ -105,7 +102,12 @@ h1, h2, h3, h4, h5, h6 {
       background: rgba(0, 0, 0, 0.4); }
   @media screen and (max-width: 768px) {
     #colorlib-page {
-      padding-top: 5em; } }
+      padding-top: 0em; }
+    
+    .menu-show #colorlib-page {
+      transform: translateY(-10vw);
+    }
+    }
 
 #colorlib-main-nav {
   position: absolute;
@@ -115,7 +117,6 @@ h1, h2, h3, h4, h5, h6 {
   padding: 4em 40px 40px 40px;
   width: 360px;
   height: 100%;
-  background: white;
   z-index: 1002;
   text-align: center;
   visibility: hidden;
@@ -130,17 +131,16 @@ h1, h2, h3, h4, h5, h6 {
   -ms-transform: scale(0);
   -o-transform: scale(0);
   transform: scale(0);
-  overflow-y: scroll; }
-  @media screen and (max-width: 768px) {
+  overflow-y:hidden; }
+  @media screen and (min-width: 768px) {
     #colorlib-main-nav {
-      width: 300px; } }
-  #colorlib-main-nav .colorlib-nav-toggle {
+      min-height:100vh !important;
+      width: 300px; } 
+  .colorlib-nav-toggle {
     position: absolute;
-    top: 5px;
+    top: 0px;
     right: 40px;
     padding: 20px;
-    height: 44px;
-    width: 44px;
     background: rgba(0, 0, 0, 0.05);
     line-height: 0;
     padding: 0 !important;
@@ -153,28 +153,29 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s; }
-    #colorlib-main-nav .colorlib-nav-toggle i {
+     .colorlib-nav-toggle i {
       top: 18px !important;
       left: 0 !important;
       margin: 0 !important;
       padding: 0 !important;
       line-height: 0;
       text-indent: 0; }
-    #colorlib-main-nav .colorlib-nav-toggle.show {
+     .colorlib-nav-toggle.show {
       visibility: visible;
       opacity: 1; }
-    #colorlib-main-nav .colorlib-nav-toggle:hover {
+     .colorlib-nav-toggle:hover {
       background: black; }
-      #colorlib-main-nav .colorlib-nav-toggle:hover i::before, #colorlib-main-nav .colorlib-nav-toggle:hover i::after {
+       .colorlib-nav-toggle:hover i::before, .colorlib-nav-toggle:hover i::after {
         content: '';
         width: 20px;
         height: 1px;
         background: #fff;
         position: absolute;
-        left: 0; }
+        left: 0; } }
   .menu-show #colorlib-main-nav {
     visibility: visible;
     opacity: 1;
+    min-height:100vh !important;
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);
@@ -207,92 +208,7 @@ h1, h2, h3, h4, h5, h6 {
           text-decoration: none; }
       #colorlib-main-nav ul li.active a {
         color: #CA82F8; }
-  #colorlib-main-nav .form-group {
-    margin-bottom: 40px;
-    position: relative;
-    width: 100%; }
-    @media screen and (max-width: 480px) {
-      #colorlib-main-nav .form-group {
-        width: 100%; } }
-    #colorlib-main-nav .form-group input::-webkit-input-placeholder {
-      color: #333333; }
-    #colorlib-main-nav .form-group input::-moz-input-placeholder {
-      color: #333333; }
-    #colorlib-main-nav .form-group input::-ms-input-placeholder {
-      color: #333333; }
-    #colorlib-main-nav .form-group input::-o-input-placeholder {
-      color: #333333; }
-    #colorlib-main-nav .form-group input::input-placeholder {
-      color: #333333; }
-  #colorlib-main-nav #search {
-    font-size: 14px;
-    width: 100%;
-    padding-right: 3em;
-    border: none;
-    border: 2px solid #f2f2f2;
-    background: #fafafa;
-    color: #333333 !important; }
-  #colorlib-main-nav button {
-    position: absolute;
-    top: 0;
-    right: -4px;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    border-radius: 0;
-    background: #CA82F8;
-    color: #fff;
-    border: none;
-    padding: 16px; }
-  #colorlib-main-nav #email {
-    font-size: 18px;
-    width: 100%;
-    border: none;
-    border: 2px solid #fff;
-    background: #fff;
-    color: #333333 !important; }
-  #colorlib-main-nav .gallery {
-    float: left;
-    width: 50%;
-    height: 150px;
-    position: relative;
-    display: table;
-    z-index: 0;
-    text-decoration: none; }
-    @media screen and (max-width: 768px) {
-      #colorlib-main-nav .gallery {
-        width: 25%; } }
-    @media screen and (max-width: 480px) {
-      #colorlib-main-nav .gallery {
-        width: 50%; } }
-    #colorlib-main-nav .gallery:after {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      content: '';
-      background: rgba(0, 0, 0, 0.3);
-      opacity: 0;
-      z-index: -1;
-      -webkit-transition: 0.3s;
-      -o-transition: 0.3s;
-      transition: 0.3s; }
-    #colorlib-main-nav .gallery span {
-      display: table-cell;
-      vertical-align: middle;
-      height: 150px;
-      opacity: 0;
-      -webkit-transition: 1s;
-      -o-transition: 1s;
-      transition: 1s; }
-      #colorlib-main-nav .gallery span i {
-        color: #fff;
-        font-size: 20px; }
-    #colorlib-main-nav .gallery:hover:after, #colorlib-main-nav .gallery:focus:after {
-      opacity: 1; }
-    #colorlib-main-nav .gallery:hover span, #colorlib-main-nav .gallery:focus span {
-      opacity: 1; }
+  
 
 header {
   padding: 2em 0;
@@ -353,7 +269,7 @@ header {
     #colorlib-progress,
     #colorlib-contact,
     #colorlib-about {
-      padding: 5em 0; } }
+      padding: 4em 0; } }
 
 .rotate {
   position: absolute;
@@ -681,6 +597,12 @@ header {
     padding: 3em 2em 3em 0; }
   .services-flex .one-forth {
     width: 45%; }
+    .services-flex .one-forth .overflowy {
+      transition: all 0.5s ease-in-out !important;
+    }
+    .services-flex .one-forth .overflowy:hover {
+      transform: translateY(-18%);
+    }
     .services-flex .one-forth .one-third, .services-flex .one-forth .one-forth {
       display: inline-block; }
       @media screen and (max-width: 768px) {
@@ -941,6 +863,10 @@ header {
   -ms-border-radius: 0;
   border-radius: 0; }
 
+.testimony {
+  padding-left: 2rem;
+}
+
 .testimony blockquote {
   border: none; }
   .testimony blockquote p {
@@ -1113,6 +1039,8 @@ header {
 
 .colorlib-nav-toggle {
   cursor: pointer;
+  position: fixed;
+  right: 1em;
   text-decoration: none; }
   .colorlib-nav-toggle.active i::before, .colorlib-nav-toggle.active i::after {
     background: #000; }
@@ -1177,10 +1105,12 @@ header {
 .colorlib-nav-toggle:hover i::after {
   bottom: -10px; }
 
-.colorlib-nav-toggle.active i {
+.menu-show .colorlib-nav-toggle i {
+  position: relative;
+  z-index: 1005;
   background: transparent; }
 
-.colorlib-nav-toggle.active i::before {
+.menu-show .colorlib-nav-toggle i::before {
   top: 0;
   -webkit-transform: rotateZ(45deg);
   -moz-transform: rotateZ(45deg);
@@ -1188,7 +1118,7 @@ header {
   -o-transform: rotateZ(45deg);
   transform: rotateZ(45deg); }
 
-.colorlib-nav-toggle.active i::after {
+  .menu-show .colorlib-nav-toggle i::after {
   bottom: 0;
   -webkit-transform: rotateZ(-45deg);
   -moz-transform: rotateZ(-45deg);
@@ -1208,6 +1138,14 @@ header {
     .colorlib-nav-toggle {
       display: block;
       top: 0px; } }
+
+.menu-show .colorlib-nav-toggle {
+  position: fixed;
+}
+
+.menu-show #colorlib-main-nav {
+  position: fixed;
+}
 
 .contact-info {
   margin-bottom: 4em;
@@ -1583,14 +1521,28 @@ padding: 15px;
     width: 100%;
     margin: auto 1em;
   }
-
+  @media screen and (max-width: 768px) {
+    .wrap-box {
+      min-height:60px;
+      margin-bottom: 2em;
+       } }
+  @media screen and (max-width: 420px) {
+    .wrap-box, .wrap-box p {
+      min-height: 84px;
+      font-size: 12px !important; 
+      margin-bottom: 2.5em;
+       } }
 
 
   .wrap-box p {
-    font-size: 12px ;
+    font-size: 14px ;
+    color: #000;
     max-width: 90% !important;
     margin-right: 2em;
+    padding-bottom: 2em;
   }
+
+  
 
   .dynamic-content {
     /* Add additional styling for dynamic content as needed */
@@ -1617,10 +1569,19 @@ padding: 15px;
     margin-bottom: 10px;
     cursor: pointer;
   }
+  @media screen and (max-width: 768px) {
+    .hover-indicator  {
+      margin-bottom: 0;
+      padding: 6px;
+    }
+  }
 
   .hover-content {
     position: absolute;
     opacity: 0;
+    padding: 1em;
+    display: block;
+    min-height: 20px;
     transition: all 0.5s ease-in-out;
     /* Add additional styling for hover content as needed */
   }
@@ -1633,20 +1594,34 @@ padding: 15px;
 
 
   nav {
-    display:flex;
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #642f19;
-    justify-content: space-around;
-    padding: 1em;
+    background-color: rgba(220, 220, 220, 0.2);
+    box-shadow: 0 1px 6px rgba(10, 10, 10, 0.25);
+    padding: 0.8em;
     -webkit-transition: all 1s ease-out !important;
     -o-transition: all 1s ease-out !important;
     transition: all 1s ease-out !important;
   }
+
+  .normal-nav {
+    display:flex;
+    justify-content: space-around;
+  }
+  @media screen and (max-width: 768px) {
+    .normal-nav {
+      display:none;
+    }
+  }
+
+  .mobile-nav {
+    display: grid;
+  }
   
   nav a {
     color: white;
+    text-shadow:1px 1px 4px rgba(0, 0, 0, 0.4);
     text-decoration: none;
     font-weight: bold;
     transition: all 1s ease-out !important;
@@ -1661,7 +1636,7 @@ padding: 15px;
   }
 
   /* 隱藏navbar的動畫效果 */
-header.hide nav {
+header.hide .normal-nav {
   opacity: 0% !important ;
   display:flex !important;
   transform: translateY(-100%);
@@ -1671,7 +1646,7 @@ header.hide nav {
 
 
 /* 顯示navbar的動畫效果 */
-header.show nav {
+header.show .normal-nav {
   opacity: 100% !important;
   transform: translateY(0);
   transition: transform 0.5s ease-in-out;
@@ -1709,12 +1684,20 @@ header.show nav {
 
 .yellow-bg li, .yellow-bg a {
   color: #e8e8e8 !important;
-  
+}
+
+.yellow-bg h3 {
+  margin-bottom: 6px;
 }
 
 .yellow-bg li:hover ,.yellow-bg a:hover {
   color: #ffffff !important;
   text-decoration-line:none ;
+}
+
+.yellow-bg span {
+  font-size: 12px !important;
+  padding-bottom: 1em;
 }
 
 #highlight {
@@ -1758,3 +1741,99 @@ th {
 tr:hover {
   background-color: #f5f5f5;
 }
+
+.note {
+  font-size: 12px;
+}
+
+#colorlib-about {
+  background-image:url(../images/banner-bg-01.png) !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 768px) {
+  #colorlib-about {
+    background-image:url(../images/banner-bg-02.png) !important; } }
+
+#intro-text {
+  transition: all 0.5s ease-in-out;
+}
+
+#intro-text:hover {
+  padding: 20%;
+}
+
+#intro-box {
+  padding-left: 20%;
+  padding-right: 20%;
+}
+@media screen and (max-width: 768px) {
+  #intro-box {
+    padding-left: 5%;
+  padding-right: 5%; } }
+
+  @media screen and (min-width: 768px) {
+    ::-webkit-scrollbar {
+      width: 12px; /* 滚动条的宽度 */
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.2); /* 滚动条轨道的背景色 */
+    }
+    
+
+  
+    ::-webkit-scrollbar-corner {
+      display: none;
+      border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555; /* 滚动条手柄的鼠标悬停时背景色 */
+    }
+   }
+
+   ::-webkit-scrollbar-thumb {
+    background: rgb(169, 169, 169); 
+    border-radius: 10px;
+  }
+
+  body {
+    overflow: hidden; /* 隐藏滚动条 */
+  }
+
+  .loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .loader:before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 5px solid #333;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .content.hide {
+    display: none ;
+  }
+  .content.show {
+    display: block !important; /* 使用 !important 来确保优先级 */
+  }
+ 
