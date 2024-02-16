@@ -15,7 +15,16 @@
 			(navigator.platform.indexOf("iPod") != -1)
 	    );
 	};
+	var loading = function() {
 
+		// 載入動畫
+		window.addEventListener('load', function() {
+		var loader = document.querySelector('.loader');
+		loader.style.display = 'none'; 
+		document.body.style.overflow = 'auto'; 
+		document.querySelector('.content').style.display = 'block'; 
+  });
+	};
 
 	var fullHeight = function() {
 
@@ -31,18 +40,30 @@
 		$('.js-colorlib-nav-toggle').on('click', function(event) {
 			event.preventDefault();
 			var $this = $(this);
-			if( $('body').hasClass('menu-show') ) {
+			if( $('#colorlib-main-nav').hasClass('menu-show') ) {
+				$('#colorlib-main-nav').removeClass('menu-show');
 				$('body').removeClass('menu-show');
-				$('#colorlib-main-nav > .js-colorlib-nav-toggle').removeClass('show');
+				$('#mobile-nav > .js-colorlib-nav-toggle').removeClass('show');
 			} else {
+				$('#colorlib-main-nav').addClass('menu-show');
 				$('body').addClass('menu-show');
-				setTimeout(function(){
-					$('#colorlib-main-nav > .js-colorlib-nav-toggle').addClass('show');
-				}, 900);
 			}
 		})
 	};
+	document.addEventListener('DOMContentLoaded', function() {
+		var content = document.querySelector('.content');
+		content.classList.add('show'); // 添加一个类名来显示内容
+		content.classList.remove('hide'); // 添加一个类名来显示内容
+	  
+		var loader = document.querySelector('.loader');
+		loader.style.display = 'none'; // 隐藏加载动画
+		document.body.style.overflow = 'auto'; // 恢复滚动条
 
+		var progress = document.querySelector('.progress');
+		setTimeout(function() {
+		  progress.style.display = 'none'; // 隐藏进度条
+		}, 300); // 延迟隐藏进度条，确保动画效果
+	  });
 	// Animations
 
 	var contentWayPoint = function() {
@@ -169,6 +190,7 @@
 		burgerMenu();
 		counterWayPoint();
 		contentWayPoint();
+		loading();
 		owlCarouselFeatureSlide();
 	});
 
@@ -274,5 +296,7 @@ window.addEventListener('mousemove', function (e) {
     nav.classList.remove('hide');
   }
 });
+
+
 
 }());
