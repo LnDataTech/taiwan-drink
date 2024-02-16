@@ -57,9 +57,10 @@
 
 	</head>
 
-	<body style="width:100vw;">
-		<header style="display:block !important;">
-			<nav class="kevin-nav">
+	<body style="width:100%;">
+		<div class="loader"></div>
+		<header style="display:block !important;width:100%;">
+			<nav class="normal-nav">
 				<a href="#trends">全台趨勢</a>
 				<a href="#consumer-profile">人口及地區分析</a>
 				<a href="#brands">探究品牌</a>
@@ -67,27 +68,42 @@
 				<a href="#strategy">行銷建議與品牌置入</a>
 				<a href="#about-us">關於我們</a>
 			</nav>
+			<div class="colorlib-nav-toggle" id="mobile-nav" style="position:fixed;">
+				<i class="js-colorlib-nav-toggle"></i>
+				<nav class="mobile-nav" id="colorlib-main-nav">
+					<a href="#trends">全台趨勢</a>
+					<a href="#consumer-profile">人口及地區分析</a>
+					<a href="#brands">探究品牌</a>
+					<a href="#consumer-behavior">消費行為及喜好</a>
+					<a href="#strategy">行銷建議與品牌置入</a>
+					<a href="#about-us">關於我們</a>
+				</nav>
+			</div>
 		</header>
 
-	<div id="colorlib-page">
+	<div id="colorlib-page" class="contents">
 
 		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  新的一塊開始囉  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 
-		<div id="colorlib-about">
-			<div class="container">
-				<div class="row text-center" style="height:80vh; display:flex;padding-top: 2em;">
+		<div id="colorlib-about" >
+			<div class="container" >
+				<div class="text-center intro" style="height:100vh;display: flex;padding-top: 2em;clear: both;">
 					<div class="scroll-indicator">
 						<span></span>
 					</div>
-					<h1 class="bold col-md-12" style="color:#3e3a39;">台灣飲料市場分析</h1>
-					<p class="col-md-12 text-center" style="color:#3e3a39;font-size: smaller;">
-						數據告訴我們，台灣的飲料市場正在經歷蓬勃的成長。多樣性的選擇吸引了來自各個角落的消費者，而創新的飲品更是推動市場蓬勃發展的原動力之一。從某種程度上，每一杯飲料都是一次獨特的體驗，反映了消費者對於口感和品味的無窮追求。
-						這次LnData將透過公開數據、發票數據，深入探究飲品消費的更多層面。從品牌到品項，以及年齡、性別、地區等多維度的分析，揭示台灣人民的飲料喜好。
-						這場數據之旅，不僅是一次飲料文化的探索，更是解讀每一張發票背後所隱藏的消費趨勢。隨我們一同打開這扇飲品數據的大門，探索每一滴滋味背後的故事。
-					</p>
+					<div id="intro-box" class="text-center">
+						<h1 class="bold col-md-10" style="color:#3e3a39;width: 100%;">激飲狂潮</h1>
+						<h2 class="col-md-10" style="color:#3e3a39;width: 100%;">用數據揭密全台手搖飲</h2>
+						
+						<p class="text-center" style="color:#3e3a39;font-size: smaller;width: 100%;" id="intro-text">
+							台灣的手搖飲料市場正在經歷蓬勃的成長。多樣性的選擇吸引了來自各個角落的消費者，幾乎不論男女老少都來過一杯，也反映了消費者對於口感和品味的無窮追求。
+							這次LnData將透過公開數據與發票數據，深入探究飲品消費的更多層面，從品牌、品項、茶種、風味、甜度、冰塊，以及不同年齡性別與地區等多維度的分析，真實地解密手搖飲品消費趨勢。
+						</p>
+					</div>
+					
 				</div>
-				<div class="row">
+				<div class="row" style="background-image: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(250, 250, 250, 1) 9%);">
 					<div class="col-md-12">
 						<div class="services-flex">
 							<div class="one-third">
@@ -150,7 +166,7 @@
 							<div class="one-third">
 								<div class="row">
 									<div class="col-md-12 col-md-offset-0 animate-box intro-heading">
-										<span>Population and regional outlines</span>
+										<span>Market size & value</span>
 										<h2>全台飲料產業營業額</h2>
 										<div>你知道嗎?</div>
 										<div class="flourish-embed flourish-number-ticker" data-src="visualisation/16390056"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
@@ -162,8 +178,8 @@
 								</div>
 								<div class="row">
 									<div class="col-md-12 col-md-offset-0 animate-box intro-heading">
-										<span>Population and regional outlines</span>
-										<h2>全台飲料店家數</h2>
+										<span>Number of stores</span>
+										<h2>全台飲料家數</h2>
 										<div class="flourish-embed flourish-chart" data-src="visualisation/16029467"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div>
 											台灣手搖飲店隨處可見，從財政部統計資料來看，2022年４月全國飲料店數創下歷史新高，達2.2萬家店，比便利商店還多出 1 萬家。
@@ -177,6 +193,7 @@
 								<div class="png-img"><img  src="images/dec-1.png" width="100"></div>
 								<div class="yellow-bg"  style="padding: 2em;">
 									<h3>全台飲料產業成長因素</h3>
+									<span>點擊看更多</span>
 									<ul>
 										<li class="hover-indicator" data-id="5"><a>飲料多樣性</a></li>
 										<li class="hover-indicator" data-id="6"><a>創新飲品</a></li>
@@ -221,22 +238,25 @@
 							<div class="one-third">
 								<div class="row">
 									<div class="col-md-12 col-md-offset-0 animate-box intro-heading">
-										<span>Population and regional outlines</span>
-										<h2>全台飲料產業營業額</h2>
+										<span>Demographic profile</span>
+										<h2>人口輪廓消費力</h2>
 										<div class="flourish-embed flourish-chart dynamic-indicator" data-id="1" data-src="visualisation/15843978"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div class="mobile">
-											從人口輪廓看，所有年齡層都是女性大於男性，女性消費者對於買手搖飲的興趣明顯大於男性，其中25~34歲的女性更佔了兩成以上
+											從人口輪廓看，所有年齡層都是女性大於男性，女性消費者對於買手搖飲的興趣明顯大於男性，其中25~34歲的女性更佔了兩成以上。
 										</div>
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-md-12 col-md-offset-0 animate-box intro-heading">
-										<span>Population and regional outlines</span>
-										<h2>全台飲料店家數</h2>
+										<span>Consumption by city</span>
+										<h2>全台縣市消費力</h2>
 										<div class="flourish-embed flourish-chart dynamic-indicator" data-id="2" data-src="visualisation/15678128"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div class="mobile">
-											縣市的發票數與金額基本上與人口數成正相關
+											發票數與金額基本上與縣市人口數成正相關，值得注意的是「臺中市」相較於人口數，飲料的消費量是很驚人的！
 										</div>
+										<p class="note">
+											*根據內政部統計，2022年全年人口數為2326萬4640人，六都按人口數排序下來，分別為新北市399萬5551人、台中市281萬4459人、高雄市272萬8137人、台北市248萬681人、桃園市228萬1464人以及台南市185萬2997人。
+										</p>
 									</div>
 								</div>
 							</div>
@@ -244,10 +264,10 @@
 								<div class="png-img"><img  src="images/dec-2.png" width="100"></div>
 								<div>
 									<div class="dynamic-content" data-id="1">
-										從人口輪廓看，所有年齡層都是女性大於男性，女性消費者對於買手搖飲的興趣明顯大於男性，其中25~34歲的女性更佔了兩成以上
+										從人口輪廓看，所有年齡層都是女性大於男性，女性消費者對於買手搖飲的興趣明顯大於男性，其中25~34歲的女性更佔了兩成以上。
 									</div>
 									<p class="dynamic-content" data-id="2">
-										根據內政部統計，2022年全年人口數為2326萬4640人，六都按人口數排序下來，分別為新北市399萬5551人、台中市281萬4459人、高雄市272萬8137人、台北市248萬681人、桃園市228萬1464人以及台南市185萬2997人
+										發票數與金額基本上與縣市人口數成正相關，值得注意的是「臺中市」相較於人口數，飲料的消費量是很驚人的！
 									</p>
 								</div>
 							</div>
@@ -268,71 +288,72 @@
 							<div class="one-third">
 								<div class="row">
 									<div class="col-md-12 col-md-offset-0 animate-box intro-heading dynamic-indicator" data-id="0">
-										<span>Population and regional outlines</span>
+										<span>Brand popularity</span>
 										<h2>全台熱門品牌</h2>
 										<div class="flourish-embed flourish-chart" data-id="0" data-src="visualisation/15678338"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div>
-											
 											<p class="note">
-												觀察品牌：
+												*觀察品牌：
 												<br>
-												清心福全、五十嵐、茶的魔手、鮮茶道、麻古、茶湯會、迷客夏、coco、都可、comebuy、可不可熟成紅茶、珍煮丹、萬波、老賴、五桐號、大苑子、teatop、台灣第一味、康青龍、龜記、烏弄、一沐日、茶聚、鶴茶樓、不要對我尖叫、日出茶太、先喝道、初韻、春陽茶事、春芳號、一芳、貢茶、歇腳亭、八曜和茶、樺達奶茶、白巷子、得正、約翰紅茶、有飲、麥吉、再睡五分鐘、鮮茶道、喫茶、一手私藏、樂法、北回木瓜牛奶。
+												CoCo都可、Comebuy、Soma、teatop 台灣第一味、一手私藏世界紅茶、一沐日、上宇林、不要對我尖叫、五十嵐、五桐號、先喝道、八曜和茶、再睡五分鐘、初韻、功夫茶、叮哥、可不可熟成紅茶、喫茶小舖、坪林手、大苑子、大茗、天仁茶業(喫茶趣)、小職人、山焙、康青龍、得正、拾汣茶屋、日出茶太、日日裝茶、春芳號、春陽茶事、有飲、木衛二、樂法、樺達奶茶、歇腳亭、武林茶、水巷茶弄、泰讚了、清心福全、烏弄、無飲、珍煮丹、發發、白巷子、約翰紅茶公司、老賴茶棧、茶奶士多、茶湯會、茶的魔手、茶聚、萬波、貢茶、迷客夏、魚池貳壹、鮮茶道、鶴茶樓、麥吉、麻古茶坊、龍角、龜記。
+												<br>
+												共 61 個品牌。
 											</p>																						
 										</div>
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-md-12 col-md-offset-0 animate-box intro-heading dynamic-indicator" data-id="1">
-										<span>Population and regional outlines</span>
-										<h2>每個縣市熱門品牌top5 (北部)</h2>
+										<span>Popular brands in northern Taiwan</span>
+										<h2>每個縣市熱門品牌 Top10 (北部)</h2>
 										<div class="flourish-embed flourish-chart mobile" data-id="1" data-src="visualisation/15678542"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div style="min-height:300px;">
-											北部基本上前五名跟全台輪廓類似，唯一差別較大的是「麻古」皆不在前五名內。
+											最熱門前五名跟全台輪廓類似，唯一差別較大的是「麻古」皆不在北部各縣市的前五名內。
 										</div>
 									</div>
 									<div class="col-md-12 col-md-offset-0 animate-box intro-heading dynamic-indicator" data-id="2">
-										<span>Population and regional outlines</span>
-										<h2>每個縣市熱門品牌top5 (中部)</h2>
+										<span>Popular brands in Central Taiwan</span>
+										<h2>每個縣市熱門品牌 Top10 (中部)</h2>
 										<div class="flourish-embed flourish-chart mobile" data-id="2" data-src="visualisation/15678621"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div style="min-height:300px;">
-											從中部往南開始麻古就有部分出現在各縣市的前五名內。
+											從中部往南開始品牌的多樣性就更高了，各縣市的六到十名重複性也很低，較有縣市區別的特色。
 										</div>
 									</div>
 									<div class="col-md-12 col-md-offset-0 animate-box intro-heading dynamic-indicator" data-id="3">
-										<span>Population and regional outlines</span>
-										<h2>每個縣市熱門品牌top5 (南部)</h2>
+										<span>Popular brands in southern Taiwan</span>
+										<h2>每個縣市熱門品牌 Top10 (南部)</h2>
 										<div class="flourish-embed flourish-chart mobile" data-id="3" data-src="visualisation/15678703"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div style="min-height:300px;">
-											而南部縣市的前五名就跟全台輪廓有些不同，多樣性較大，包括出現了:茶的魔手、鮮茶道、一沐日、烏弄等。
+											相較於北部縣市，「麻古」在臺南、高雄、屏東的發票比例極高，而「五十嵐」在雲林、嘉義的飲料市場中佔比極高。
 										</div>
 									</div>
 									<div class="col-md-12 col-md-offset-0 animate-box intro-heading dynamic-indicator" data-id="4">
-										<span>Population and regional outlines</span>
-										<h2>每個縣市熱門品牌top5(東部)</h2>
+										<span>Popular brands in Eastern Taiwan</span>
+										<h2>每個縣市熱門品牌 Top10 (東部)</h2>
 										<div class="flourish-embed flourish-chart mobile" data-id="4" data-src="visualisation/15678732"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div style="min-height:300px;">
-											叮哥只出現在花東兩縣市的前五名，但可能是因為選擇也不多。
+											東部則是「鮮茶道」、「清心」與「叮哥」的天下。
 											<br>
 											*宜蘭、花蓮沒有50嵐
 										</div>
 									</div>
 									<div class="col-md-12 col-md-offset-0 animate-box intro-heading dynamic-indicator" data-id="5">
-										<span>Population and regional outlines</span>
-										<h2>每個縣市熱門品牌top5(離島)</h2>
+										<span>Popular brands in Taiwan’s outlying islands</span>
+										<h2>每個縣市熱門品牌 Top10 (離島)</h2>
 										<div class="flourish-embed flourish-chart mobile" data-id="5" data-src="visualisation/15678752"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div style="min-height:300px;">
-											50嵐在離島的飲料市場可說是稱霸。
+											「五十嵐」在澎湖的飲料市場可說是稱霸。
 										</div>
 									</div>
-									<div class="col-md-12 col-md-offset-0 animate-box intro-heading>
-										<span>Population and regional outlines</span>
+									<div class="col-md-12 col-md-offset-0 animate-box intro-heading">
+										<span>Taipei vs Taichung</span>
 										<h2>兩大市場比較(台北vs台中)</h2>
 										<div class="flourish-embed flourish-chart mobile" data-id="5" data-src="visualisation/15678752"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div style="min-height:300px;">
 											將全台前兩名飲料市場台中、台北分別拉前十名來看，可發現還是有彼此的品牌喜好差別，重複的品牌只有4/10個。
 										</div>
 									</div>
-								
+								</div>
 							</div>
 							<div class="one-forth services-img sticky mobile-hide" style="max-height: 100vh;background-color:#DAE0B1;position: sticky;">
 								<div class="png-img"><img  src="images/dec-3.png" width="100"></div>
@@ -347,7 +368,7 @@
 									<div class="dynamic-content" style="min-width:100%;" data-id="2">
 										<div class="flourish-embed flourish-chart" data-src="visualisation/15678621"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 									</div>
-									<div class="dynamic-content" style="min-width:100%;" data-id="3">
+									<div class="dynamic-content overflowy" style="min-width:100%;" data-id="3">
 										<div class="flourish-embed flourish-chart" data-src="visualisation/15678703"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 									</div>
 									<div class="dynamic-content" style="min-width:100%;" data-id="4">
@@ -365,8 +386,8 @@
 							
 								<div class="row" style="width:100%;">
 									<div class="col-md-offset-0 animate-box intro-heading">
-										<span>Population and regional outlines</span>
-										<h2>各縣市最熱銷品牌</h2>
+										<span>Number of popular brands in each county & city</span>
+										<h2>各縣市熱門品牌數量</h2>
 										<div>
 											品牌數方面，台中位居第二，僅次首都台北，但在消費發票數方面超越台北，位居第一，推測可能跟人口數也有關係。前六名剛好是六都，第七名則是彰化縣。
 										</div>
@@ -377,7 +398,7 @@
 							<div class="one-third">
 								<div class="row">
 									<div class="col-md-12 col-md-offset-0 animate-box intro-heading">
-										<span>Population and regional outlines</span>
+										<span>Preferred brands by age</span>
 										<h2>各年齡偏好品牌</h2>
 										<div class="flourish-embed flourish-chart" data-src="visualisation/15679093"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div>
@@ -390,7 +411,7 @@
 										</div>
 									</div>
 									<div class="col-md-12 col-md-offset-0 animate-box intro-heading dynamic-indicator" data-id="11" >
-										<span>Population and regional outlines</span>
+										<span>Average consumer age by Brand</span>
 										<h2>品牌平均年齡</h2>
 										<div class="flourish-embed flourish-chart" data-src="visualisation/15844272"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div>
@@ -398,13 +419,73 @@
 										</div>
 									</div>
 									<div class="col-md-12 col-md-offset-0 animate-box intro-heading">
-										<span>Population and regional outlines</span>
+										<span>TOP3 popular items of each brand</span>
 										<h2>各品牌 TOP3 熱門品項</h2>
 										<div class="brand-selector">
 											<label for="brandSelect">選擇手搖品牌：</label>
 											<select id="brandSelect" onchange="changeBrand()">
-											  <option value="brand1">品牌一</option>
-											  <option value="brand2">品牌二</option>
+											  <option value="brand1">CoCo都可</option>
+											  <option value="brand2">Comebuy</option>
+											  <option value="brand3">Soma</option>
+											  <option value="brand4">teatop 台灣第一味</option>
+											  <option value="brand5">一手私藏世界紅茶</option>
+											  <option value="brand6">一沐日</option>
+											  <option value="brand7">上宇林</option>
+											  <option value="brand8">不要對我尖叫</option>
+											  <option value="brand9">五十嵐</option>
+											  <option value="brand10">五桐號</option>
+											  <option value="brand11">先喝道</option>
+											  <option value="brand12">八曜和茶</option>
+											  <option value="brand13">再睡五分鐘</option>
+											  <option value="brand14">初韻</option>
+											  <option value="brand15">功夫茶</option>
+											  <option value="brand16">叮哥</option>
+											  <option value="brand17">可不可熟成紅茶</option>
+											  <option value="brand18">喫茶小舖</option>
+											  <option value="brand19">坪林手</option>
+											  <option value="brand20">大苑子</option>
+											  <option value="brand21">大茗</option>
+											  <option value="brand22">天仁茶業(喫茶趣)</option>
+											  <option value="brand23">小職人</option>
+											  <option value="brand24">山焙</option>
+											  <option value="brand25">康青龍</option>
+											  <option value="brand26">得正</option>
+											  <option value="brand27">拾汣茶屋</option>
+											  <option value="brand28">日出茶太</option>
+											  <option value="brand29">日日裝茶</option>
+											  <option value="brand30">春芳號</option>
+											  <option value="brand31">春陽茶事</option>
+											  <option value="brand32">有飲</option>
+											  <option value="brand33">木衛二</option>
+											  <option value="brand34">樂法</option>
+											  <option value="brand35">樺達奶茶</option>
+											  <option value="brand36">歇腳亭</option>
+											  <option value="brand37">武林茶</option>
+											  <option value="brand38">水巷茶弄</option>
+											  <option value="brand39">泰讚了</option>
+											  <option value="brand40">清心福全</option>
+											  <option value="brand41">烏弄</option>
+											  <option value="brand42">無飲</option>
+											  <option value="brand43">珍煮丹</option>
+											  <option value="brand44">發發</option>
+											  <option value="brand45">白巷子</option>
+											  <option value="brand46">約翰紅茶公司</option>
+											  <option value="brand47">老賴茶棧</option>
+											  <option value="brand48">茶奶士多</option>
+											  <option value="brand49">茶湯會</option>
+											  <option value="brand50">茶的魔手</option>
+											  <option value="brand51">茶聚</option>
+											  <option value="brand52">萬波</option>
+											  <option value="brand53">貢茶</option>
+											  <option value="brand54">迷客夏</option>
+											  <option value="brand55">魚池貳壹</option>
+											  <option value="brand56">鮮茶道</option>
+											  <option value="brand57">鶴茶樓</option>
+											  <option value="brand58">麥吉</option>
+											  <option value="brand59">麻古茶坊</option>
+											  <option value="brand60">龍角</option>
+											  <option value="brand61">龜記</option>
+											 
 											  <!-- 添加更多品牌选项 -->
 											</select>
 										  </div>
@@ -414,44 +495,804 @@
 											  <tr>
 												<th>排名</th>
 												<th>產品名稱</th>
-												<th>評價</th>
 											  </tr>
 											</thead>
 											<!-- 表格的内容行，根据品牌切换显示 -->
 											<tbody id="tableBody">
-											  <!-- 第一品牌的Top 3 -->
+											  <!-- CoCo都可 -->
 											  <tr id="brand1Row1">
 												<td>1</td>
-												<td>品項1</td>
-												<td>評價A</td>
+												<td>百香雙響炮</td>
 											  </tr>
 											  <tr id="brand1Row2">
 												<td>2</td>
-												<td>品項2</td>
-												<td>評價B</td>
+												<td>四季春青茶</td>
 											  </tr>
 											  <tr id="brand1Row3">
 												<td>3</td>
-												<td>品項3</td>
-												<td>評價C</td>
+												<td>珍珠奶茶</td>
 											  </tr>
-											  <!-- 第二品牌的Top 3 -->
+											  <!-- Comebuy -->
 											  <tr id="brand2Row1" style="display: none;">
 												<td>1</td>
-												<td>品項4</td>
-												<td>評價A</td>
+												<td>混珠清境烏龍拿鐵</td>
 											  </tr>
 											  <tr id="brand2Row2" style="display: none;">
 												<td>2</td>
-												<td>品項5</td>
-												<td>評價B</td>
+												<td>冬韻青茶</td>
 											  </tr>
 											  <tr id="brand2Row3" style="display: none;">
 												<td>3</td>
-												<td>品項6</td>
-												<td>評價C</td>
+												<td>烏龍凍古樹拿鐵</td>
 											  </tr>
-											  <!-- 添加更多品牌的Top 3 -->
+											  <!-- soma -->
+											  <tr id="brand3Row1" style="display: none;">
+												<td>1</td>
+												<td>原味茶歐雷</td>
+											  </tr>
+											  <tr id="brand3Row2" style="display: none;">
+												<td>2</td>
+												<td>精粹茶歐雷</td>
+											  </tr>
+											  <tr id="brand3Row3" style="display: none;">
+												<td>3</td>
+												<td>非洲可可茶歐雷</td>
+											  </tr>
+											  <!-- teatop 台灣第一味 -->
+											  <tr id="brand4Row1" style="display: none;">
+												<td>1</td>
+												<td>招牌高山青</td>
+											  </tr>
+											  <tr id="brand4Row2" style="display: none;">
+												<td>2</td>
+												<td>黑蛋奶大顆</td>
+											  </tr>
+											  <tr id="brand4Row3" style="display: none;">
+												<td>3</td>
+												<td>甘蔗青了</td>
+											  </tr>
+											  <!-- 一手私藏世界紅茶 -->
+											  <tr id="brand5Row1" style="display: none;">
+												<td>1</td>
+												<td>私藏仲夏夜紅茶杯</td>
+											  </tr>
+											  <tr id="brand5Row2" style="display: none;">
+												<td>2</td>
+												<td>印度阿薩姆琥珀紅茶杯</td>
+											  </tr>
+											  <tr id="brand5Row3" style="display: none;">
+												<td>3</td>
+												<td>俄羅斯夏卡爾紅茶杯</td>
+											  </tr>
+											  <!-- 一沐日 -->
+											  <tr id="brand6Row1" style="display: none;">
+												<td>1</td>
+												<td>油切蕎麥茶</td>
+											  </tr>
+											  <tr id="brand6Row2" style="display: none;">
+												<td>2</td>
+												<td>逮丸奶茶</td>
+											  </tr>
+											  <tr id="brand6Row3" style="display: none;">
+												<td>3</td>
+												<td>荔枝烏龍</td>
+											  </tr>
+											  <!-- 上宇林 -->
+											  <tr id="brand7Row1" style="display: none;">
+												<td>1</td>
+												<td>上宇林青茶</td>
+											  </tr>
+											  <tr id="brand7Row2" style="display: none;">
+												<td>2</td>
+												<td>太極鮮奶茶</td>
+											  </tr>
+											  <tr id="brand7Row3" style="display: none;">
+												<td>3</td>
+												<td>紅龍鮮奶茶</td>
+											  </tr>
+											  <!-- 不要對我尖叫 -->
+											  <tr id="brand8Row1" style="display: none;">
+												<td>1</td>
+												<td>桂花烏龍茶</td>
+											  </tr>
+											  <tr id="brand8Row2" style="display: none;">
+												<td>2</td>
+												<td>四季春茶</td>
+											  </tr>
+											  <tr id="brand8Row3" style="display: none;">
+												<td>3</td>
+												<td>冬瓜菊花茶</td>
+											  </tr>
+											  <!-- 五十嵐 -->
+											  <tr id="brand9Row1" style="display: none;">
+												<td>1</td>
+												<td>四季春青茶</td>
+											  </tr>
+											  <tr id="brand9Row2" style="display: none;">
+												<td>2</td>
+												<td>茉莉綠茶</td>
+											  </tr>
+											  <tr id="brand9Row3" style="display: none;">
+												<td>3</td>
+												<td>四季春珍波椰</td>
+											  </tr>
+											  <!-- 五桐號 -->
+											  <tr id="brand10Row1" style="display: none;">
+												<td>1</td>
+												<td>杏仁凍五桐茶</td>
+											  </tr>
+											  <tr id="brand10Row2" style="display: none;">
+												<td>2</td>
+												<td>經典五桐茶</td>
+											  </tr>
+											  <tr id="brand10Row3" style="display: none;">
+												<td>3</td>
+												<td>蜜桃冰茶凍飲</td>
+											  </tr>
+											  <!-- 先喝道 -->
+											  <tr id="brand11Row1" style="display: none;">
+												<td>1</td>
+												<td>英式蜜桃風味茶</td>
+											  </tr>
+											  <tr id="brand11Row2" style="display: none;">
+												<td>2</td>
+												<td>英式水果茶</td>
+											  </tr>
+											  <tr id="brand11Row3" style="display: none;">
+												<td>3</td>
+												<td>四季春茶王</td>
+											  </tr>
+											  <!-- 八曜和茶 -->
+											  <tr id="brand12Row1" style="display: none;">
+												<td>1</td>
+												<td>柚香覺醒307</td>
+											  </tr>
+											  <tr id="brand12Row2" style="display: none;">
+												<td>2</td>
+												<td>八曜和茶</td>
+											  </tr>
+											  <tr id="brand12Row3" style="display: none;">
+												<td>3</td>
+												<td>和風308</td>
+											  </tr>
+											  <!-- 再睡五分鐘 -->
+											  <tr id="brand13Row1" style="display: none;">
+												<td>1</td>
+												<td>棉被午茉綠</td>
+											  </tr>
+											  <tr id="brand13Row2" style="display: none;">
+												<td>2</td>
+												<td>日安紅厚奶</td>
+											  </tr>
+											  <tr id="brand13Row3" style="display: none;">
+												<td>3</td>
+												<td>鐵觀音歐蕾</td>
+											  </tr>
+											  <!-- 初韻 -->
+											  <tr id="brand14Row1" style="display: none;">
+												<td>1</td>
+												<td>開韻四季春</td>
+											  </tr>
+											  <tr id="brand14Row2" style="display: none;">
+												<td>2</td>
+												<td>楊枝甘露</td>
+											  </tr>
+											  <tr id="brand14Row3" style="display: none;">
+												<td>3</td>
+												<td>萃韻茉莉綠</td>
+											  </tr>
+											  <!-- 功夫茶 -->
+											  <tr id="brand15Row1" style="display: none;">
+												<td>1</td>
+												<td>四季春青茶</td>
+											  </tr>
+											  <tr id="brand15Row2" style="display: none;">
+												<td>2</td>
+												<td>功夫茶王</td>
+											  </tr>
+											  <tr id="brand15Row3" style="display: none;">
+												<td>3</td>
+												<td>岩葉紅茶</td>
+											  </tr>
+											  <!-- 叮哥 -->
+											  <tr id="brand16Row1" style="display: none;">
+												<td>1</td>
+												<td>仙楂紅烏龍</td>
+											  </tr>
+											  <tr id="brand16Row2" style="display: none;">
+												<td>2</td>
+												<td>台東洛神花茶</td>
+											  </tr>
+											  <tr id="brand16Row3" style="display: none;">
+												<td>3</td>
+												<td>四季春青茶</td>
+											  </tr>
+											  <!-- 可不可熟成紅茶 -->
+											  <tr id="brand17Row1" style="display: none;">
+												<td>1</td>
+												<td>熟成紅茶</td>
+											  </tr>
+											  <tr id="brand17Row2" style="display: none;">
+												<td>2</td>
+												<td>胭脂紅茶</td>
+											  </tr>
+											  <tr id="brand17Row3" style="display: none;">
+												<td>3</td>
+												<td>麗春紅茶</td>
+											  </tr>
+											  <!-- 喫茶小舖 -->
+											  <tr id="brand18Row1" style="display: none;">
+												<td>1</td>
+												<td>桂花烏龍</td>
+											  </tr>
+											  <tr id="brand18Row2" style="display: none;">
+												<td>2</td>
+												<td>青山茉綠</td>
+											  </tr>
+											  <tr id="brand18Row3" style="display: none;">
+												<td>3</td>
+												<td>文山青茶</td>
+											  </tr>
+											  <!-- 坪林手 -->
+											  <tr id="brand19Row1" style="display: none;">
+												<td>1</td>
+												<td>桂花烏龍</td>
+											  </tr>
+											  <tr id="brand19Row2" style="display: none;">
+												<td>2</td>
+												<td>桂花拿鐵</td>
+											  </tr>
+											  <tr id="brand19Row3" style="display: none;">
+												<td>3</td>
+												<td>金萱</td>
+											  </tr>
+											  <!-- 大苑子 -->
+											  <tr id="brand20Row1" style="display: none;">
+												<td>1</td>
+												<td>文山青茶</td>
+											  </tr>
+											  <tr id="brand20Row2" style="display: none;">
+												<td>2</td>
+												<td>愛文芒果冰沙</td>
+											  </tr>
+											  <tr id="brand20Row3" style="display: none;">
+												<td>3</td>
+												<td>纖活綠茶</td>
+											  </tr>
+											  <!-- 大茗 -->
+											  <tr id="brand21Row1" style="display: none;">
+												<td>1</td>
+												<td>酪梨奶蓋紅玉</td>
+											  </tr>
+											  <tr id="brand21Row2" style="display: none;">
+												<td>2</td>
+												<td>玉露青茶</td>
+											  </tr>
+											  <tr id="brand21Row3" style="display: none;">
+												<td>3</td>
+												<td>蘋果玉露青</td>
+											  </tr>
+											  <!-- 天仁茶業(喫茶趣) -->
+											  <tr id="brand22Row1" style="display: none;">
+												<td>1</td>
+												<td>冰913茶王</td>
+											  </tr>
+											  <tr id="brand22Row2" style="display: none;">
+												<td>2</td>
+												<td>冰珍珠鮮奶茶</td>
+											  </tr>
+											  <tr id="brand22Row3" style="display: none;">
+												<td>3</td>
+												<td>冰珍珠奶茶</td>
+											  </tr>
+											  <!-- 小職人 -->
+											  <tr id="brand23Row1" style="display: none;">
+												<td>1</td>
+												<td>皇牌鮮奶茶</td>
+											  </tr>
+											  <tr id="brand23Row2" style="display: none;">
+												<td>2</td>
+												<td>青茶</td>
+											  </tr>
+											  <tr id="brand23Row3" style="display: none;">
+												<td>3</td>
+												<td>鐵觀音鮮奶茶</td>
+											  </tr>
+											  <!-- 山焙 -->
+											  <tr id="brand24Row1" style="display: none;">
+												<td>1</td>
+												<td>金烏厚茶</td>
+											  </tr>
+											  <tr id="brand24Row2" style="display: none;">
+												<td>2</td>
+												<td>春花青茶</td>
+											  </tr>
+											  <tr id="brand24Row3" style="display: none;">
+												<td>3</td>
+												<td>88°C焙茶</td>
+											  </tr>
+											  <!-- 康青龍 -->
+											  <tr id="brand25Row1" style="display: none;">
+												<td>1</td>
+												<td>沁心金萱</td>
+											  </tr>
+											  <tr id="brand25Row2" style="display: none;">
+												<td>2</td>
+												<td>格雷冰茶</td>
+											  </tr>
+											  <tr id="brand25Row3" style="display: none;">
+												<td>3</td>
+												<td>碧玉茉莉綠茶</td>
+											  </tr>
+											  <!-- 得正 -->
+											  <tr id="brand26Row1" style="display: none;">
+												<td>1</td>
+												<td>春烏龍</td>
+											  </tr>
+											  <tr id="brand26Row2" style="display: none;">
+												<td>2</td>
+												<td>焙烏龍</td>
+											  </tr>
+											  <tr id="brand26Row3" style="display: none;">
+												<td>3</td>
+												<td>輕烏龍</td>
+											  </tr>
+											  <!-- 拾汣茶屋 -->
+											  <tr id="brand27Row1" style="display: none;">
+												<td>1</td>
+												<td>馥郁青茶</td>
+											  </tr>
+											  <tr id="brand27Row2" style="display: none;">
+												<td>2</td>
+												<td>珍珠鮮奶茶</td>
+											  </tr>
+											  <tr id="brand27Row3" style="display: none;">
+												<td>3</td>
+												<td>中焙生乳紅茶</td>
+											  </tr>
+											  <!-- 日出茶太 -->
+											  <tr id="brand28Row1" style="display: none;">
+												<td>1</td>
+												<td>四季春青茶</td>
+											  </tr>
+											  <tr id="brand28Row2" style="display: none;">
+												<td>2</td>
+												<td>太極厚茶拿鐵</td>
+											  </tr>
+											  <tr id="brand28Row3" style="display: none;">
+												<td>3</td>
+												<td>日不落經典奶茶</td>
+											  </tr>
+											  <!-- 日日裝茶 -->
+											  <tr id="brand29Row1" style="display: none;">
+												<td>1</td>
+												<td>日日春茶</td>
+											  </tr>
+											  <tr id="brand29Row2" style="display: none;">
+												<td>2</td>
+												<td>玉露綠茶</td>
+											  </tr>
+											  <tr id="brand29Row3" style="display: none;">
+												<td>3</td>
+												<td>無敵鐵觀音</td>
+											  </tr>
+											  <!-- 春芳號 -->
+											  <tr id="brand30Row1" style="display: none;">
+												<td>1</td>
+												<td>一把青春茶</td>
+											  </tr>
+											  <tr id="brand30Row2" style="display: none;">
+												<td>2</td>
+												<td>玉荷青蘆薈蜜</td>
+											  </tr>
+											  <tr id="brand30Row3" style="display: none;">
+												<td>3</td>
+												<td>茉香玉露</td>
+											  </tr>
+											  <!-- 春陽茶事 -->
+											  <tr id="brand31Row1" style="display: none;">
+												<td>1</td>
+												<td>春陽烏龍</td>
+											  </tr>
+											  <tr id="brand31Row2" style="display: none;">
+												<td>2</td>
+												<td>桂花蜜烏龍</td>
+											  </tr>
+											  <tr id="brand31Row3" style="display: none;">
+												<td>3</td>
+												<td>檸檬蜜烏龍</td>
+											  </tr>
+											  <!-- 有飲 -->
+											  <tr id="brand32Row1" style="display: none;">
+												<td>1</td>
+												<td>粉紅泡泡草莓優優</td>
+											  </tr>
+											  <tr id="brand32Row2" style="display: none;">
+												<td>2</td>
+												<td>椪糖奶霜紅茶</td>
+											  </tr>
+											  <tr id="brand32Row3" style="display: none;">
+												<td>3</td>
+												<td>焦香椪糖紅茶</td>
+											  </tr>
+											  <!-- 木衛二 -->
+											  <tr id="brand33Row1" style="display: none;">
+												<td>1</td>
+												<td>兒時綠豆沙</td>
+											  </tr>
+											  <tr id="brand33Row2" style="display: none;">
+												<td>2</td>
+												<td>綠豆沙鮮乳</td>
+											  </tr>
+											  <tr id="brand33Row3" style="display: none;">
+												<td>3</td>
+												<td>午夜藍伯爵</td>
+											  </tr>
+											  <!-- 樂法 -->
+											  <tr id="brand34Row1" style="display: none;">
+												<td>1</td>
+												<td>蘋果芭樂綠茶</td>
+											  </tr>
+											  <tr id="brand34Row2" style="display: none;">
+												<td>2</td>
+												<td>蘋果蜂蜜綠茶</td>
+											  </tr>
+											  <tr id="brand34Row3" style="display: none;">
+												<td>3</td>
+												<td>阿薩姆熟成紅茶</td>
+											  </tr>
+											  <!-- 樺達奶茶 -->
+											  <tr id="brand35Row1" style="display: none;">
+												<td>1</td>
+												<td>益壽奶茶</td>
+											  </tr>
+											  <tr id="brand35Row2" style="display: none;">
+												<td>2</td>
+												<td>樺達奶茶</td>
+											  </tr>
+											  <tr id="brand35Row3" style="display: none;">
+												<td>3</td>
+												<td>普洱奶茶</td>
+											  </tr>
+											  <!-- 歇腳亭 -->
+											  <tr id="brand36Row1" style="display: none;">
+												<td>1</td>
+												<td>珍Q椰青茶2.0</td>
+											  </tr>
+											  <tr id="brand36Row2" style="display: none;">
+												<td>2</td>
+												<td>南投四季春</td>
+											  </tr>
+											  <tr id="brand36Row3" style="display: none;">
+												<td>3</td>
+												<td>招牌珍奶</td>
+											  </tr>
+											  <!-- 武林茶 -->
+											  <tr id="brand37Row1" style="display: none;">
+												<td>1</td>
+												<td>黑紅茶</td>
+											  </tr>
+											  <tr id="brand37Row2" style="display: none;">
+												<td>2</td>
+												<td>凍頂桂花烏龍</td>
+											  </tr>
+											  <tr id="brand37Row3" style="display: none;">
+												<td>3</td>
+												<td>杉夏露高山青茶</td>
+											  </tr>
+											  <!-- 水巷茶弄 -->
+											  <tr id="brand38Row1" style="display: none;">
+												<td>1</td>
+												<td>台灣高山青</td>
+											  </tr>
+											  <tr id="brand38Row2" style="display: none;">
+												<td>2</td>
+												<td>寒天愛玉小紫蘇</td>
+											  </tr>
+											  <tr id="brand38Row3" style="display: none;">
+												<td>3</td>
+												<td>膠原愛玉小紫蘇</td>
+											  </tr>
+											  <!-- 泰讚了 -->
+											  <tr id="brand39Row1" style="display: none;">
+												<td>1</td>
+												<td>泰式傳統奶茶</td>
+											  </tr>
+											  <tr id="brand39Row2" style="display: none;">
+												<td>2</td>
+												<td>泰式傳統綠奶茶</td>
+											  </tr>
+											  <tr id="brand39Row3" style="display: none;">
+												<td>3</td>
+												<td>茶濃焉泰奶</td>
+											  </tr>
+											  <!-- 清心福全 -->
+											  <tr id="brand40Row1" style="display: none;">
+												<td>1</td>
+												<td>優多綠</td>
+											  </tr>
+											  <tr id="brand40Row2" style="display: none;">
+												<td>2</td>
+												<td>烏龍</td>
+											  </tr>
+											  <tr id="brand40Row3" style="display: none;">
+												<td>3</td>
+												<td>綠茶</td>
+											  </tr>
+											  <!-- 烏弄 -->
+											  <tr id="brand41Row1" style="display: none;">
+												<td>1</td>
+												<td>名間鄉冬片仔</td>
+											  </tr>
+											  <tr id="brand41Row2" style="display: none;">
+												<td>2</td>
+												<td>金萱烏龍</td>
+											  </tr>
+											  <tr id="brand41Row3" style="display: none;">
+												<td>3</td>
+												<td>手採阿里山金萱</td>
+											  </tr>
+											  <!-- 無飲 -->
+											  <tr id="brand42Row1" style="display: none;">
+												<td>1</td>
+												<td>金萱青茶</td>
+											  </tr>
+											  <tr id="brand42Row2" style="display: none;">
+												<td>2</td>
+												<td>甘蔗青茶</td>
+											  </tr>
+											  <tr id="brand42Row3" style="display: none;">
+												<td>3</td>
+												<td>台灣珍珠奶茶</td>
+											  </tr>
+											   <!-- 珍煮丹 -->
+											   <tr id="brand43Row1" style="display: none;">
+												<td>1</td>
+												<td>黑糖珍珠鮮奶</td>
+											  </tr>
+											  <tr id="brand43Row2" style="display: none;">
+												<td>2</td>
+												<td>不知春</td>
+											  </tr>
+											  <tr id="brand43Row3" style="display: none;">
+												<td>3</td>
+												<td>姍姍紅茶拿鐵</td>
+											  </tr>
+											  <!-- 發發 -->
+											  <tr id="brand44Row1" style="display: none;">
+												<td>1</td>
+												<td>莓果派對優格</td>
+											  </tr>
+											  <tr id="brand44Row2" style="display: none;">
+												<td>2</td>
+												<td>翡翠高山青茶</td>
+											  </tr>
+											  <tr id="brand44Row3" style="display: none;">
+												<td>3</td>
+												<td>蜜香小葉紅茶</td>
+											  </tr>
+											  <!-- 白巷子 -->
+											  <tr id="brand45Row1" style="display: none;">
+												<td>1</td>
+												<td>四季春青茶</td>
+											  </tr>
+											  <tr id="brand45Row2" style="display: none;">
+												<td>2</td>
+												<td>紅烏龍茶王</td>
+											  </tr>
+											  <tr id="brand45Row3" style="display: none;">
+												<td>3</td>
+												<td>茉香綠茶</td>
+											  </tr>
+											  <!-- 約翰紅茶公司 -->
+											  <tr id="brand46Row1" style="display: none;">
+												<td>1</td>
+												<td>雨果那堤</td>
+											  </tr>
+											  <tr id="brand46Row2" style="display: none;">
+												<td>2</td>
+												<td>曼非紅茶</td>
+											  </tr>
+											  <tr id="brand46Row3" style="display: none;">
+												<td>3</td>
+												<td>煮濃那堤</td>
+											  </tr>
+											  <!-- 老賴茶棧 -->
+											  <tr id="brand47Row1" style="display: none;">
+												<td>1</td>
+												<td>老賴紅茶</td>
+											  </tr>
+											  <tr id="brand47Row2" style="display: none;">
+												<td>2</td>
+												<td>豆香紅茶</td>
+											  </tr>
+											  <tr id="brand47Row3" style="display: none;">
+												<td>3</td>
+												<td>太后牛乳</td>
+											  </tr>
+											  <!-- 茶奶士多 -->
+											  <tr id="brand48Row1" style="display: none;">
+												<td>1</td>
+												<td>莊園烏瓦紅茶</td>
+											  </tr>
+											  <tr id="brand48Row2" style="display: none;">
+												<td>2</td>
+												<td>桂花釀綠茶</td>
+											  </tr>
+											  <tr id="brand48Row3" style="display: none;">
+												<td>3</td>
+												<td>芝士．烏瓦紅</td>
+											  </tr>
+											  <!-- 茶湯會 -->
+											  <tr id="brand49Row1" style="display: none;">
+												<td>1</td>
+												<td>觀音拿鐵</td>
+											  </tr>
+											  <tr id="brand49Row2" style="display: none;">
+												<td>2</td>
+												<td>蔗香紅茶錫蘭</td>
+											  </tr>
+											  <tr id="brand49Row3" style="display: none;">
+												<td>3</td>
+												<td>四季春</td>
+											  </tr>
+											  <!-- 茶的魔手 -->
+											  <tr id="brand50Row1" style="display: none;">
+												<td>1</td>
+												<td>台灣青茶</td>
+											  </tr>
+											  <tr id="brand50Row2" style="display: none;">
+												<td>2</td>
+												<td>台灣純綠</td>
+											  </tr>
+											  <tr id="brand50Row3" style="display: none;">
+												<td>3</td>
+												<td>山楂烏龍</td>
+											  </tr>
+											  <!-- 茶聚 -->
+											  <tr id="brand51Row1" style="display: none;">
+												<td>1</td>
+												<td>鳴翠金萱</td>
+											  </tr>
+											  <tr id="brand51Row2" style="display: none;">
+												<td>2</td>
+												<td>香片姍姍</td>
+											  </tr>
+											  <tr id="brand51Row3" style="display: none;">
+												<td>3</td>
+												<td>不知青</td>
+											  </tr>
+											  <!-- 萬波 -->
+											  <tr id="brand52Row1" style="display: none;">
+												<td>1</td>
+												<td>金萱青茶</td>
+											  </tr>
+											  <tr id="brand52Row2" style="display: none;">
+												<td>2</td>
+												<td>島嶼紅茶</td>
+											  </tr>
+											  <tr id="brand52Row3" style="display: none;">
+												<td>3</td>
+												<td>蘭葉那堤</td>
+											  </tr>
+											  <!-- 貢茶 -->
+											  <tr id="brand53Row1" style="display: none;">
+												<td>1</td>
+												<td>冰美式</t53d>
+											  </tr>
+											  <tr id="brand53Row2" style="display: none;">
+												<td>2</td>
+												<td>蜂蜜鮮奶油麻糬鬆餅</td>
+											  </tr>
+											  <tr id="brand53Row3" style="display: none;">
+												<td>3</td>
+												<td>冷萃黑咖啡</td>
+											  </tr>
+											  <!-- 迷客夏 -->
+											  <tr id="brand54Row1" style="display: none;">
+												<td>1</td>
+												<td>焙香決明大麥</td>
+											  </tr>
+											  <tr id="brand54Row2" style="display: none;">
+												<td>2</td>
+												<td>原片初露青茶</td>
+											  </tr>
+											  <tr id="brand54Row3" style="display: none;">
+												<td>3</td>
+												<td>大正紅茶拿鐵</td>
+											  </tr>
+											  <!-- 魚池貳壹 -->
+											  <tr id="brand55Row1" style="display: none;">
+												<td>1</td>
+												<td>魚池拾捌紅茶</td>
+											  </tr>
+											  <tr id="brand55Row2" style="display: none;">
+												<td>2</td>
+												<td>四季青茶</td>
+											  </tr>
+											  <tr id="brand55Row3" style="display: none;">
+												<td>3</td>
+												<td>魚池貳壹紅茶</td>
+											  </tr>
+											  <!-- 鮮茶道 -->
+											  <tr id="brand56Row1" style="display: none;">
+												<td>1</td>
+												<td>阿里山冰茶</td>
+											  </tr>
+											  <tr id="brand56Row2" style="display: none;">
+												<td>2</td>
+												<td>頂級茉莉綠茶</td>
+											  </tr>
+											  <tr id="brand56Row3" style="display: none;">
+												<td>3</td>
+												<td>琥珀紅茶</td>
+											  </tr>
+											  <!-- 鶴茶樓 -->
+											  <tr id="brand57Row1" style="display: none;">
+												<td>1</td>
+												<td>桂香烏龍茶</td>
+											  </tr>
+											  <tr id="brand57Row2" style="display: none;">
+												<td>2</td>
+												<td>鶴頂紅茶</td>
+											  </tr>
+											  <tr id="brand57Row3" style="display: none;">
+												<td>3</td>
+												<td>金萱青茶</td>
+											  </tr>
+											  <!-- 麥吉 -->
+											  <tr id="brand58Row1" style="display: none;">
+												<td>1</td>
+												<td>烤布蕾紅茶拿鐵</td>
+											  </tr>
+											  <tr id="brand58Row2" style="display: none;">
+												<td>2</td>
+												<td>麥吉紅茶拿鐵</td>
+											  </tr>
+											  <tr id="brand58Row3" style="display: none;">
+												<td>3</td>
+												<td>奶酪紅茶拿鐵</td>
+											  </tr>
+											  <!-- 麻古茶坊 -->
+											  <tr id="brand59Row1" style="display: none;">
+												<td>1</td>
+												<td>高山金萱茶</td>
+											  </tr>
+											  <tr id="brand59Row2" style="display: none;">
+												<td>2</td>
+												<td>金萱雙Q</td>
+											  </tr>
+											  <tr id="brand59Row3" style="display: none;">
+												<td>3</td>
+												<td>翡翠綠茶</td>
+											  </tr>
+											  <!-- 龍角 -->
+											  <tr id="brand60Row1" style="display: none;">
+												<td>1</td>
+												<td>龍角凍茶桂花凍</td>
+											  </tr>
+											  <tr id="brand60Row2" style="display: none;">
+												<td>2</td>
+												<td>春燦桂花</td>
+											  </tr>
+											  <tr id="brand60Row3" style="display: none;">
+												<td>3</td>
+												<td>龍涎紅茶</td>
+											  </tr>
+											  <!-- 龜記 -->
+											  <tr id="brand61Row1" style="display: none;">
+												<td>1</td>
+												<td>紅柚翡翠</td>
+											  </tr>
+											  <tr id="brand61Row2" style="display: none;">
+												<td>2</td>
+												<td>蘋果紅萱</td>
+											  </tr>
+											  <tr id="brand61Row3" style="display: none;">
+												<td>3</td>
+												<td>柳丁翡翠</td>
+											  </tr>
+
 											</tbody>
 										  </table>
 									</div>
@@ -495,7 +1336,7 @@
 							<div class="one-third">
 								<div class="row">
 									<div class="col-md-12 col-md-offset-0 animate-box intro-heading dynamic-indicator" data-id="11">
-										<span>Population and regional outlines</span>
+										<span>Consumption periods preference </span>
 										<h2>消費熱門時段</h2>
 										<div class="flourish-embed flourish-chart mobile" data-id="11" data-src="visualisation/16416382"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div style="min-height:300px;">
@@ -503,7 +1344,7 @@
 										</div>
 									</div>
 									<div class="col-md-12 col-md-offset-0 animate-box intro-heading dynamic-indicator" data-id="12">
-										<span>Population and regional outlines</span>
+										<span>Ice volume preference (overall)</span>
 										<h2>偏好冰量溫度(整體)</h2>
 										<div class="flourish-embed flourish-chart mobile" data-id="12" data-src="visualisation/16140713"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div style="min-height:300px;">
@@ -514,7 +1355,7 @@
 										</div>
 									</div>
 									<div class="col-md-12 col-md-offset-0 animate-box intro-heading dynamic-indicator" data-id="13">
-										<span>Population and regional outlines</span>
+										<span>Sweetness preference (overall)</span>
 										<h2>偏好甜度(整體)</h2>
 										<div class="flourish-embed flourish-chart mobile" data-id="13" data-src="visualisation/16368645"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div style="min-height:300px;">
@@ -524,7 +1365,7 @@
 										</div>
 									</div>
 									<div class="col-md-12 col-md-offset-0 animate-box intro-heading dynamic-indicator" data-id="14">
-										<span>Population and regional outlines</span>
+										<span>Ice volume preference by gender</span>
 										<h2>不同性別偏好冰量比例</h2>
 										<div class="flourish-embed flourish-chart mobile" data-id="14" data-src="visualisation/16369780"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div style="min-height:300px;">
@@ -532,7 +1373,7 @@
 										</div>
 									</div>
 									<div class="col-md-12 col-md-offset-0 animate-box intro-heading dynamic-indicator" data-id="15">
-										<span>Population and regional outlines</span>
+										<span>Ice volume preference by age</span>
 										<h2>不同年齡偏好冰量比例</h2>
 										<div class="flourish-embed flourish-chart mobile" data-id="15" data-src="visualisation/16370068"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div style="min-height:300px;">
@@ -540,7 +1381,7 @@
 										</div>
 									</div>
 									<div class="col-md-12 col-md-offset-0 animate-box intro-heading dynamic-indicator" data-id="16">
-										<span>Population and regional outlines</span>
+										<span>Sweetness preference by gender</span>
 										<h2>不同性別偏好甜度比例</h2>
 										<div class="flourish-embed flourish-chart mobile" data-id="16" data-src="visualisation/16369882"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div style="min-height:300px;">
@@ -548,7 +1389,7 @@
 										</div>
 									</div>
 									<div class="col-md-12 col-md-offset-0 animate-box intro-heading dynamic-indicator" data-id="17">
-										<span>Population and regional outlines</span>
+										<span>Sweetness preference by age</span>
 										<h2>不同年齡偏好甜度比例</h2>
 										<div class="flourish-embed flourish-chart mobile" data-id="17" data-src="visualisation/16369932"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div style="min-height:300px;">
@@ -556,7 +1397,7 @@
 										</div>
 									</div>
 									<div class="col-md-12 col-md-offset-0 animate-box intro-heading dynamic-indicator" data-id="18">
-										<span>Population and regional outlines</span>
+										<span>Sweetness and ice correlation</span>
 										<h2>甜度與冰塊關係</h2>
 										<div class="flourish-embed flourish-chart mobile" data-id="18" data-src="visualisation/16352590"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div style="min-height:300px;">
@@ -575,7 +1416,7 @@
 										</div>
 									</div>
 									<div class="col-md-12 col-md-offset-0 animate-box intro-heading dynamic-indicator" data-id="19">
-										<span>Population and regional outlines</span>
+										<span>Ice volume preference in different areas</span>
 										<h2>不同區域偏好冰量</h2>
 										<div class="flourish-embed flourish-chart mobile" data-id="19" data-src="visualisation/16369766"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div style="min-height:300px;">
@@ -585,7 +1426,7 @@
 										</div>
 									</div>
 									<div class="col-md-12 col-md-offset-0 animate-box intro-heading dynamic-indicator" data-id="20">
-										<span>Population and regional outlines</span>
+										<span>Sweetness preference in different areas</span>
 										<h2>不同區域偏好甜度</h2>
 										<div class="flourish-embed flourish-chart mobile" data-id="20" data-src="visualisation/16369712"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div style="min-height:300px;">
@@ -595,7 +1436,7 @@
 										</div>
 									</div>
 									<div class="col-md-12 col-md-offset-0 animate-box intro-heading dynamic-indicator" data-id="21">
-										<span>Population and regional outlines</span>
+										<span>Tea categories preference(overall)</span>
 										<h2>熱門偏好茶類(整體)</h2>
 										<div class="flourish-embed flourish-chart mobile" data-id="21" data-src="visualisation/16368656"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div style="min-height:300px;">
@@ -609,7 +1450,7 @@
 										</div>
 									</div>
 									<div class="col-md-12 col-md-offset-0 animate-box intro-heading dynamic-indicator" data-id="22">
-										<span>Population and regional outlines</span>
+										<span>Tea categories preference by gender</span>
 										<h2>不同性別偏好茶類</h2>
 										<div class="flourish-embed flourish-chart mobile" data-id="22" data-src="visualisation/16292427"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div style="min-height:300px;">
@@ -617,7 +1458,7 @@
 										</div>
 									</div>
 									<div class="col-md-12 col-md-offset-0 animate-box intro-heading dynamic-indicator" data-id="23">
-										<span>Population and regional outlines</span>
+										<span>Tea categories preference by age</span>
 										<h2>不同年齡偏好茶類</h2>
 										<div class="flourish-embed flourish-chart" data-id="23" data-src="visualisation/16371280"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div class="mobile" style="min-height:300px;">
@@ -625,7 +1466,7 @@
 										</div>
 									</div>			
 									<div class="col-md-12 col-md-offset-0 animate-box intro-heading dynamic-indicator" data-id="24">
-										<span>Population and regional outlines</span>
+										<span>Toppings/Flavor preference(overall)</span>
 										<h2>熱門偏好風味/加料(整體)</h2>
 										<div class="flourish-embed flourish-chart mobile" data-id="24" data-src="visualisation/16213179"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div style="min-height:300px;">
@@ -633,7 +1474,7 @@
 											<br>
 											其次則非最經典的珍珠莫屬，包含一般傳統黑糖珍珠與波霸珍珠，同樣的近年來「白玉珍珠」也是許多人常點的選項。
 											<br>
-											除此之外，古早味的冬瓜磚、酸甜不膩的梅子、常見經典的茉莉花香、香濃柚人的奶蓋、Q彈的椰果也都相當熱門
+											除此之外，古早味的冬瓜磚、酸甜不膩的梅子、常見經典的茉莉花香、香濃誘人的奶蓋、Q彈的椰果也都相當熱門
 										</div>
 									</div>								
 								</div>
@@ -703,11 +1544,6 @@
 		</div>
 
 
-
-		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  新的一塊開始囉  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-    	<!-- 這一塊：能力複製貼上即可
-			 注意！！因為能力線條的%數，是依照顏色區分，並不會因為你寫90%就跑到90%，所以請按照能力高低進行排列
-			 最多四個 -->
 		<div id="strategy">
 			<div class="container">
 				<div class="row text-center">
@@ -715,36 +1551,37 @@
 				</div>
 				<div class="row">
 					<div class="col-md-12 col-md-offset-0 text-center animate-box intro-heading">
-						
 						<h2>搶佔飲料紅海市場，這些策略不可少</h2>
 						<span>移動鼠標看更多</span>
 					</div>
 				</div>
+
 				<div class="row col-md-12">
 					<div class="col-md-4 cardo" style="display: flex;align-items: center">
 						<div class="face" style="margin-left: 10%">
 							<h3 style="position: absolute;top: 10%">個性化行銷</h3>
-							<img class="card-top" src="https://img.icons8.com/plasticine/100/000000/wheat.png" style="padding-top: 15%">
+							<img class="card-top"  src="https://img.icons8.com/external-soft-fill-juicy-fish/80/external-personal-internet-security-soft-fill-soft-fill-juicy-fish-2.png" style="padding-top: 15%">
 							<p class="card-down" style="padding-top: 15%">
-								基於數據分析的結果，實施個性化行銷策略。這可以包括通過個性化的促銷活動、產品推薦或會員獎勵計畫，提高客戶忠誠度。
+								基於數據分析的結果，實施個性化行銷策略。這可以包括通過個性化的促銷活動、產品推薦或會員獎勵計畫，提高客戶忠誠度
 							</p>
 						</div>
+
 					</div>
 					<div class="col-md-4 cardo">
 						<div class="face" style="margin-left: 10%">
 							<h3 class="text-center" style="position: absolute;top:6%">社交媒體行銷</h3>
-							<img class="card-top" src="https://img.icons8.com/plasticine/100/000000/money.png" style="top:40%">
+							<img class="card-top" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/80/external-social-sales-flaticons-lineal-color-flat-icons-2.png" style="top:40%">
 							<p class="card-down" style="padding-top: 20%">
-								搖飲在社交媒體上有著廣泛的受眾，因此有效的社交媒體行銷是重要的。利用數據分析來了解哪些平台和內容對目標受眾更有效，制定相應的行銷計畫。
+								手搖飲在社交媒體上有著廣泛的受眾，因此有效的社交媒體行銷是重要的。利用數據分析來了解哪些平台和內容對目標受眾更有效，制定相應的行銷計畫
 							</p>
 						</div>
 					</div>
 					<div class="col-md-4 cardo">
 						<div class="face" style="margin-left: 10%">
 							<h3 style="position: absolute;top:10%">促銷活動與優惠</h3>
-							<img class="card-top" src="https://img.icons8.com/plasticine/100/000000/plant-under-sun.png" style="padding-top: 10%">
+							<img class="card-top" src="https://img.icons8.com/office/80/discount.png" style="padding-top: 10%">
 							<p class="card-down" style="padding-top: 10%">
-								根據數據分析的結果，發現客戶偏好的產品或口味，然後通過促銷活動和優惠來刺激銷售。這可能包括限時優惠、套餐優惠等。
+								根據數據分析的結果，發現客戶偏好的產品或口味，然後通過促銷活動和優惠來刺激銷售。這可能包括限時優惠、套餐優惠等
 							</p>
 						</div>
 					</div>
@@ -753,27 +1590,28 @@
 					<div class="col-md-4 cardo" style="display: flex;align-items: center">
 						<div class="face" style="margin-left: 10%">
 							<h3 style="position: absolute;top: 10%">品牌建立</h3>
-							<img class="card-top" src="https://img.icons8.com/plasticine/100/000000/wheat.png" style="padding-top: 15%">
+							<img class="card-top" src="https://img.icons8.com/external-wanicon-flat-wanicon/80/external-brand-business-model-canvas-wanicon-flat-wanicon.png" style="padding-top: 15%">
 							<p class="card-down" style="padding-top: 15%">
-								利用數據分析來了解手搖飲市場上的競爭格局，並制定一個獨特而引人注目的品牌建立策略。這可能包括品牌故事、視覺形象和價值主張。
+								利用數據分析來了解手搖飲市場上的競爭格局，並制定一個獨特而引人注目的品牌建立策略。這可能包括品牌故事、視覺形象和價值主張
 							</p>
 						</div>
+						
 					</div>
 					<div class="col-md-4 cardo">
 						<div class="face" style="margin-left: 10%">
 							<h3 class="text-center" style="position: absolute;top:6%">數據安全和合規性</h3>
-							<img class="card-top" src="https://img.icons8.com/plasticine/100/000000/money.png" style="top:40%">
+							<img class="card-top" src="https://img.icons8.com/cute-clipart/80/security-checked.png" style="top:40%">
 							<p class="card-down" style="padding-top: 20%">
-								在進行數據分析和應用之前，確保遵守相應的數據安全和隱私合規標準，以保護客戶數據。
+								在進行數據分析和應用之前，確保遵守相應的數據安全和隱私合規標準，以保護客戶數據
 							</p>
 						</div>
 					</div>
 					<div class="col-md-4 cardo">
 						<div class="face" style="margin-left: 10%">
 							<h3 style="position: absolute;top:10%">定期評估和調整</h3>
-							<img class="card-top" src="https://img.icons8.com/plasticine/100/000000/plant-under-sun.png" style="padding-top: 10%">
+							<img class="card-top" src="https://img.icons8.com/external-wanicon-flat-wanicon/80/external-evaluate-design-thinking-wanicon-flat-wanicon.png" style="padding-top: 10%">
 							<p class="card-down" style="padding-top: 10%">
-								定期使用數據分析評估行銷策略的效果，根據實際反饋和趨勢調整策略，確保保持競爭力。
+								定期使用數據分析評估行銷策略的效果，根據實際反饋和趨勢調整策略，確保保持競爭力
 							</p>
 						</div>
 					</div>
@@ -787,65 +1625,11 @@
 
 				</div>
 				
-				<div class="row">
-					<div class="col-md-3 col-sm-6 text-center">
-						<h2 class="progress-head">Graphic Design</h2>
-					<div class="progress blue">
-						<span class="progress-left">
-							<span class="progress-bar"></span>
-						</span>
-						<span class="progress-right">
-							<span class="progress-bar"></span>
-						</span>
-						<div class="progress-value">90%</div>
-					</div>
-					</div>
 				
-					<div class="col-md-3 col-sm-6 text-center">
-						<h2 class="progress-head">Illustration</h2>
-					<div class="progress yellow">
-						<span class="progress-left">
-							<span class="progress-bar"></span>
-						</span>
-						<span class="progress-right">
-							<span class="progress-bar"></span>
-						</span>
-						<div class="progress-value">85%</div>
-					</div>
-					</div>
 
-					<div class="col-md-3 col-sm-6 text-center">
-						<h2 class="progress-head">Front-End Development</h2>
-					<div class="progress green">
-						<span class="progress-left">
-							<span class="progress-bar"></span>
-						</span>
-						<span class="progress-right">
-							<span class="progress-bar"></span>
-						</span>
-						<div class="progress-value">80%</div>
-					</div>
-					</div>
-
-					<div class="col-md-3 col-sm-6 text-center">
-						<h2 class="progress-head">Web Marketing</h2>
-					<div class="progress pink">
-						<span class="progress-left">
-							<span class="progress-bar"></span>
-						</span>
-						<span class="progress-right">
-							<span class="progress-bar"></span>
-						</span>
-						<div class="progress-value">75%</div>
-					</div>
-					</div>
-				</div>
+			
 			</div>
-		</div>
-		<!-- End -->
-
-
-		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  新的一塊開始囉  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		</div> 
     
 		<div id="about-us">
 			<div class="container">
@@ -946,14 +1730,14 @@
 				</div>
 				<div class="row">
 					<div class="col-md-12 col-md-offset-0 text-center animate-box intro-heading">
-						<span>Blesss</span>
-						<h2>Bless & Cheer</h2>
+						<span>Message from the team</span>
+						<h2>我們想說的是</h2>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-12">
 						<div class="rotate">
-							<h2 class="heading">Bless & Cheer</h2>
+							<h2 class="heading">我們想說的是</h2>
 						</div>
 					</div>
 				</div>
@@ -963,7 +1747,7 @@
 							<div class="col-md-12 text-center">
 								<div class="testimony">
 									<blockquote>
-										<p>"All the buried seeds crack open in the dark the instant they surrender to a process they can't see."</p>
+										<p>"平常不怎麼喝飲料，所以沒想到飲料市場水這麼深XD"</p>
 										<span>&mdash; Vivi</span>
 									</blockquote>
 								</div>
@@ -973,7 +1757,7 @@
 							<div class="col-md-12 text-center">
 								<div class="testimony">
 									<blockquote>
-										<p>"Winners never quit, and quitters never win."</p>
+										<p>"清資料清到吐，戒飲料了：）"</p>
 										<span>&mdash; Kevin</span>
 									</blockquote>
 								</div>
@@ -983,7 +1767,7 @@
 							<div class="col-md-12 text-center">
 								<div class="testimony">
 									<blockquote>
-										<p>"You have to believe in yourself when no one else does. It's the key to the destination."</p>
+										<p>"所以我說一沐日為什麼這麼難訂？"</p>
 										<span>&mdash; Doris</span>
 									</blockquote>
 								</div>
