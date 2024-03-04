@@ -15,16 +15,21 @@
 			(navigator.platform.indexOf("iPod") != -1)
 	    );
 	};
-	var loading = function() {
 
+	var loading = function() {
 		// 載入動畫
 		window.addEventListener('load', function() {
 		var loader = document.querySelector('.loader');
 		loader.style.display = 'none'; 
-		document.body.style.overflow = 'auto'; 
+
 		document.querySelector('.content').style.display = 'block'; 
-  });
+		});
 	};
+
+	window.addEventListener('load', function() {
+		document.body.style.overflow = 'auto'; // 恢复滚动条
+		document.querySelector('.content').style.display = 'block'; // 显示网页内容
+	  });
 
 	var fullHeight = function() {
 
@@ -50,20 +55,8 @@
 			}
 		})
 	};
-	document.addEventListener('DOMContentLoaded', function() {
-		var content = document.querySelector('.content');
-		content.classList.add('show'); // 添加一个类名来显示内容
-		content.classList.remove('hide'); // 添加一个类名来显示内容
-	  
-		var loader = document.querySelector('.loader');
-		loader.style.display = 'none'; // 隐藏加载动画
-		document.body.style.overflow = 'auto'; // 恢复滚动条
 
-		var progress = document.querySelector('.progress');
-		setTimeout(function() {
-		  progress.style.display = 'none'; // 隐藏进度条
-		}, 300); // 延迟隐藏进度条，确保动画效果
-	  });
+
 	// Animations
 
 	var contentWayPoint = function() {
