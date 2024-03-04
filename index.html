@@ -46,10 +46,10 @@
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- D3.JS -->
-	<script src="https://d3js.org/d3.v5.min.js"></script>
+
 	<!-- CUSTOMER JS -->
     <script src="script.js"></script>
+	<script src="js/progress.js" type="text/javascript"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -58,7 +58,7 @@
 	</head>
 
 	<body style="width:100%;">
-		<div class="loader"></div>
+		<div class="loader"><span>飲料製作中...馬上就好囉!</span><p>www.lndata.com</p><img  src="https://www.lndata.com/lndata_logo.png"></div>
 		<header style="display:block !important;width:100%;">
 			<nav class="normal-nav">
 				<a href="#trends">全台趨勢</a>
@@ -82,10 +82,6 @@
 		</header>
 
 	<div id="colorlib-page" class="contents">
-
-		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  新的一塊開始囉  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-
 		<div id="colorlib-about" >
 			<div class="container" >
 				<div class="text-center intro" style="height:100vh;display: flex;padding-top: 2em;clear: both;">
@@ -99,6 +95,11 @@
 						<p class="text-center" style="color:#3e3a39;font-size: smaller;width: 100%;" id="intro-text">
 							台灣的手搖飲料市場正在經歷蓬勃的成長。多樣性的選擇吸引了來自各個角落的消費者，幾乎不論男女老少都來過一杯，也反映了消費者對於口感和品味的無窮追求。
 							這次LnData將透過公開數據與發票數據，深入探究飲品消費的更多層面，從品牌、品項、茶種、風味、甜度、冰塊，以及不同年齡性別與地區等多維度的分析，真實地解密手搖飲品消費趨勢。
+							<br>
+							資料區間:2023/5/1 - 2023/9/30 
+							<br>
+							<span>(*本分析結果可能受時間與抽樣影響而有一定誤差。我們將其視為一個測試性的開源專案，如果您對分析內容與數據有任何建議或想法，歡迎<a href="https://www.lndata.com/contact?utm_source=drink-website&utm_campaign=drink-market" target="_blank">聯繫我們</a>。)</span>
+							
 						</p>
 					</div>
 					
@@ -141,6 +142,7 @@
 											<h3>5. 行銷建議與品牌置入</h3>
 										</div>
 									</div>
+									<p>你可以使用網頁上方的導覽列快速跳到章節段落喔</p>
 								</div>
 							</div>
 							<div class="one-forth services-img" style="background-image: url(images/bg-img.jpg);">
@@ -167,7 +169,7 @@
 								<div class="row">
 									<div class="col-md-12 col-md-offset-0 animate-box intro-heading">
 										<span>Market size & value</span>
-										<h2>全台飲料產業營業額</h2>
+										<h2 style="margin-bottom:1em">全台飲料產業營業額</h2>
 										<div>你知道嗎?</div>
 										<div class="flourish-embed flourish-number-ticker" data-src="visualisation/16390056"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div class="flourish-embed flourish-chart" data-src="visualisation/15843483"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
@@ -182,7 +184,8 @@
 										<h2>全台飲料家數</h2>
 										<div class="flourish-embed flourish-chart" data-src="visualisation/16029467"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div>
-											台灣手搖飲店隨處可見，從財政部統計資料來看，2022年４月全國飲料店數創下歷史新高，達2.2萬家店，比便利商店還多出 1 萬家。
+											台灣手搖飲店隨處可見，從財政部統計資料來看，2022年４月全國各類型飲料店數創下歷史新高，達2.6萬家店，比便利商店還多出 1 萬多家有餘。不僅家數在過去10年內成長67.6%，銷售額更是以9.5%CAGR的速率成長。
+											<br>
 											<br>
 											其中，高雄和台南為全台手搖飲店數最多的縣市，高雄市手搖飲家數3656家、占比15.88％居冠；台南市3333家、占比14.48％，位居第二。
 										</div>
@@ -193,7 +196,7 @@
 								<div class="png-img"><img  src="images/dec-1.png" width="100"></div>
 								<div class="yellow-bg"  style="padding: 2em;">
 									<h3>全台飲料產業成長因素</h3>
-									<span>點擊看更多</span>
+									<span>點擊或移動滑鼠看更多</span>
 									<ul>
 										<li class="hover-indicator" data-id="5"><a>飲料多樣性</a></li>
 										<li class="hover-indicator" data-id="6"><a>創新飲品</a></li>
@@ -242,7 +245,7 @@
 										<h2>人口輪廓消費力</h2>
 										<div class="flourish-embed flourish-chart dynamic-indicator" data-id="1" data-src="visualisation/15843978"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div class="mobile">
-											從人口輪廓看，所有年齡層都是女性大於男性，女性消費者對於買手搖飲的興趣明顯大於男性，其中25~34歲的女性更佔了兩成以上。
+											從人口輪廓看，所有年齡層都是女性大於男性，女性消費者對於買手搖飲的興趣明顯大於男性，其中25~34歲的女性更佔了整體的兩成左右。
 										</div>
 									</div>
 								</div>
@@ -252,7 +255,7 @@
 										<h2>全台縣市消費力</h2>
 										<div class="flourish-embed flourish-chart dynamic-indicator" data-id="2" data-src="visualisation/15678128"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div class="mobile">
-											發票數與金額基本上與縣市人口數成正相關，值得注意的是「臺中市」相較於人口數，飲料的消費量是很驚人的！
+											發票數與金額基本上與縣市人口數成正相關，值得注意的是「臺中市」相較於其實際人口數，飲料的消費量是很驚人的！也就是說，臺中人的人均飲料消費非常可觀。
 										</div>
 										<p class="note">
 											*根據內政部統計，2022年全年人口數為2326萬4640人，六都按人口數排序下來，分別為新北市399萬5551人、台中市281萬4459人、高雄市272萬8137人、台北市248萬681人、桃園市228萬1464人以及台南市185萬2997人。
@@ -264,10 +267,10 @@
 								<div class="png-img"><img  src="images/dec-2.png" width="100"></div>
 								<div>
 									<div class="dynamic-content" data-id="1">
-										從人口輪廓看，所有年齡層都是女性大於男性，女性消費者對於買手搖飲的興趣明顯大於男性，其中25~34歲的女性更佔了兩成以上。
+										從人口輪廓看，所有年齡層都是女性大於男性，女性消費者對於買手搖飲的興趣明顯大於男性，其中25~34歲的女性更佔了整體的兩成左右。
 									</div>
 									<p class="dynamic-content" data-id="2">
-										發票數與金額基本上與縣市人口數成正相關，值得注意的是「臺中市」相較於人口數，飲料的消費量是很驚人的！
+										發票數與金額基本上與縣市人口數成正相關，值得注意的是「臺中市」相較於其實際人口數，飲料的消費量是很驚人的！也就是說，臺中人的人均飲料消費非常可觀。
 									</p>
 								</div>
 							</div>
@@ -291,6 +294,7 @@
 										<span>Brand popularity</span>
 										<h2>全台熱門品牌</h2>
 										<div class="flourish-embed flourish-chart" data-id="0" data-src="visualisation/15678338"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+										<p class="mobile-hide">在我們分析的61個品牌當中，經典不敗老字號品牌——五十嵐位居第一，第二及第三名分別是麻古與可不可紅茶。</p>
 										<div>
 											<p class="note">
 												*觀察品牌：
@@ -308,7 +312,7 @@
 										<h2>每個縣市熱門品牌 Top10 (北部)</h2>
 										<div class="flourish-embed flourish-chart mobile" data-id="1" data-src="visualisation/15678542"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div style="min-height:300px;">
-											最熱門前五名跟全台輪廓類似，唯一差別較大的是「麻古」皆不在北部各縣市的前五名內。
+											在北部的縣市中，消費者最熱門前五名跟全台輪廓類似；唯一差別較大的是「麻古」皆不在北部各縣市的前五名內。這可能受民眾偏好與品牌分布影響。
 										</div>
 									</div>
 									<div class="col-md-12 col-md-offset-0 animate-box intro-heading dynamic-indicator" data-id="2">
@@ -316,7 +320,7 @@
 										<h2>每個縣市熱門品牌 Top10 (中部)</h2>
 										<div class="flourish-embed flourish-chart mobile" data-id="2" data-src="visualisation/15678621"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div style="min-height:300px;">
-											從中部往南開始品牌的多樣性就更高了，各縣市的六到十名重複性也很低，較有縣市區別的特色。
+											從中部往南開始品牌的多樣性就更高了，各縣市的六到十名重複性也很低，較有縣市區別的特色。不過整體仍是五十嵐與清心福全兩個人的武林，而Coco都可則僅在苗栗較有勢力。
 										</div>
 									</div>
 									<div class="col-md-12 col-md-offset-0 animate-box intro-heading dynamic-indicator" data-id="3">
@@ -324,7 +328,7 @@
 										<h2>每個縣市熱門品牌 Top10 (南部)</h2>
 										<div class="flourish-embed flourish-chart mobile" data-id="3" data-src="visualisation/15678703"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div style="min-height:300px;">
-											相較於北部縣市，「麻古」在臺南、高雄、屏東的發票比例極高，而「五十嵐」在雲林、嘉義的飲料市場中佔比極高。
+											相較於北部縣市，「麻古」在臺南、高雄、屏東的消費佔比極高；而「五十嵐」則在雲林、嘉義的飲料市場中佔據市場霸主。有趣的是「茶的魔手」在臺南成功打下一片天，更超車麻古。
 										</div>
 									</div>
 									<div class="col-md-12 col-md-offset-0 animate-box intro-heading dynamic-indicator" data-id="4">
@@ -332,7 +336,7 @@
 										<h2>每個縣市熱門品牌 Top10 (東部)</h2>
 										<div class="flourish-embed flourish-chart mobile" data-id="4" data-src="visualisation/15678732"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div style="min-height:300px;">
-											東部則是「鮮茶道」、「清心」與「叮哥」的天下。
+											東部則是「鮮茶道」、「清心」與「叮哥」的天下。其中清心在宜蘭一方獨霸、花蓮可說是鮮茶道的天下、叮哥則在臺東自成一家。
 											<br>
 											*宜蘭、花蓮沒有50嵐
 										</div>
@@ -342,40 +346,43 @@
 										<h2>每個縣市熱門品牌 Top10 (離島)</h2>
 										<div class="flourish-embed flourish-chart mobile" data-id="5" data-src="visualisation/15678752"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div style="min-height:300px;">
-											「五十嵐」在澎湖的飲料市場可說是稱霸。
+											「五十嵐」在離島的飲料市場可說是稱霸，尤其在澎湖市場更是一支獨秀。不過這兩地外島縣市在品牌組成上或許受地理氣候與人文風情影響，在品牌組成上比想像更大。
 										</div>
 									</div>
-									<div class="col-md-12 col-md-offset-0 animate-box intro-heading">
+									<div class="col-md-12 col-md-offset-0 animate-box intro-heading dynamic-indicator" data-id="6">
 										<span>Taipei vs Taichung</span>
 										<h2>兩大市場比較(台北vs台中)</h2>
-										<div class="flourish-embed flourish-chart mobile" data-id="5" data-src="visualisation/15678752"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+										<div class="flourish-embed flourish-chart mobile" data-id="6" data-src="visualisation/16964770"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div style="min-height:300px;">
-											將全台前兩名飲料市場台中、台北分別拉前十名來看，可發現還是有彼此的品牌喜好差別，重複的品牌只有4/10個。
+											將全台前兩名飲料市場台中、台北分別拉前十名來看，可發現還是有彼此的品牌喜好差別，重複的品牌只有4/10個。不過還是要提醒，這些分析結果受到資料取樣與時間影響，隨著品牌分店布局變動，結果也會不大相同。
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="one-forth services-img sticky mobile-hide" style="max-height: 100vh;background-color:#DAE0B1;position: sticky;">
+							<div id="dec-banner-g" class="one-forth services-img sticky mobile-hide" style="max-height: 100vh;background-color:#DAE0B1;position: sticky;">
 								<div class="png-img"><img  src="images/dec-3.png" width="100"></div>
 								<div>
 									<div class="dynamic-content" style="min-width:100%;" data-id="0">
-										<p>五十嵐位居第一，第二及第三名分別是麻古與可不可。</p>
+										<p>在我們分析的61個品牌當中，經典不敗老字號品牌——五十嵐位居第一，第二及第三名分別是麻古與可不可紅茶。</p>
 									</div>
 									
-									<div class="dynamic-content" style="min-width:100%;" data-id="1">
+									<div class="dynamic-content overflowy" style="min-width:100%;" data-id="1">
 										<div class="flourish-embed flourish-chart" data-src="visualisation/15678542"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 									</div>
-									<div class="dynamic-content" style="min-width:100%;" data-id="2">
+									<div class="dynamic-content overflowy" style="min-width:100%;" data-id="2">
 										<div class="flourish-embed flourish-chart" data-src="visualisation/15678621"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 									</div>
 									<div class="dynamic-content overflowy" style="min-width:100%;" data-id="3">
 										<div class="flourish-embed flourish-chart" data-src="visualisation/15678703"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 									</div>
-									<div class="dynamic-content" style="min-width:100%;" data-id="4">
+									<div class="dynamic-content overflowy" style="min-width:100%;" data-id="4">
 										<div class="flourish-embed flourish-chart" data-src="visualisation/15678732"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 									</div>
 									<div class="dynamic-content" style="min-width:100%;" data-id="5">
 										<div class="flourish-embed flourish-chart" data-src="visualisation/15678752"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+									</div>
+									<div class="dynamic-content" style="min-width:100%;" data-id="6">
+										<div class="flourish-embed flourish-chart" data-src="visualisation/16964770"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 									</div>
 								</div>
 							</div>
@@ -388,8 +395,8 @@
 									<div class="col-md-offset-0 animate-box intro-heading">
 										<span>Number of popular brands in each county & city</span>
 										<h2>各縣市熱門品牌數量</h2>
-										<div>
-											品牌數方面，台中位居第二，僅次首都台北，但在消費發票數方面超越台北，位居第一，推測可能跟人口數也有關係。前六名剛好是六都，第七名則是彰化縣。
+										<div style="padding-bottom:2em">
+											品牌數方面，台中位居第二，僅次首都台北，顯示台北市場的品牌多樣性（當然，一些更在地性的品牌可能被忽略）。不過如前面所說，在消費人次數量方面台中則超越台北，但兩者可謂不相上下。總之，以品牌豐富度來說，前六名剛好是六都，第七名則是彰化縣。
 										</div>
 										<div class="flourish-embed flourish-map" data-src="visualisation/15857953"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 									</div>
@@ -397,20 +404,13 @@
 						<div class="services-flex">
 							<div class="one-third">
 								<div class="row">
-									<div class="col-md-12 col-md-offset-0 animate-box intro-heading">
+									<div class="col-md-12 col-md-offset-0 animate-box intro-heading dynamic-indicator" data-id="11">
 										<span>Preferred brands by age</span>
 										<h2>各年齡偏好品牌</h2>
 										<div class="flourish-embed flourish-chart" data-src="visualisation/15679093"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-										<div>
-											<ul>
-												<li><a class="hover-indicator" data-id="1">年輕人選擇的品牌： 一沐日、龜記</a></li>
-												<li><a class="hover-indicator" data-id="2">中年以上選擇的品牌： 大苑子</a></li>
-												<li><a class="hover-indicator" data-id="3">年長者偏好的品牌： 天仁、萬波</a></li>
-												<li><a class="hover-indicator" data-id="4">年齡跨足普遍受歡迎的品牌： 50嵐、清心、麻古</a></li>
-											</ul>
-										</div>
+										<p>我們也發現，不同年齡層對於品牌的偏好也各不相同。除了霸榜的前幾名之外，例如Z世代年輕人更常購買一沐日、龜記等新品牌；對於X世代來說天仁茗茶或是萬波則更吸引他們。</p>
 									</div>
-									<div class="col-md-12 col-md-offset-0 animate-box intro-heading dynamic-indicator" data-id="11" >
+									<div class="col-md-12 col-md-offset-0 animate-box intro-heading dynamic-indicator" data-id="12" >
 										<span>Average consumer age by Brand</span>
 										<h2>品牌平均年齡</h2>
 										<div class="flourish-embed flourish-chart" data-src="visualisation/15844272"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
@@ -1300,21 +1300,32 @@
 							</div>
 							<div class="one-forth services-img sticky mobile-hide" style="max-height: 100vh;background-color:#DAE0B1;position: sticky;">
 								<div class="png-img"><img  src="images/dec-3.png" width="100"></div>
-								<div class="wrap-box">
-									<div class="hover-content" data-id="1">
-										從人口輪廓看，所有年齡層都是女性大於男性，女性消費者對於買手搖飲的興趣明顯大於男性，其中25~34歲的女性更佔了兩成以上
+								<div class="yellow-bg dynamic-content" data-id="11" style="padding: 2em;">
+									<h3>不同世代的品牌偏好</h3>
+									<span>點擊或移動滑鼠看更多</span>
+									<ul id="brand-list" style="padding-top:1em;">
+										<li><a class="hover-indicator" data-id="1" style="color: #642f19">年輕人選擇的品牌： 一沐日、龜記</a></li>
+										<li><a class="hover-indicator" data-id="2">中壯年選擇的品牌： 大苑子</a></li>
+										<li><a class="hover-indicator" data-id="3">年長者偏好的品牌： 天仁、萬波</a></li>
+										<li><a class="hover-indicator" data-id="4">年齡跨足普遍受歡迎的品牌： 50嵐、清心、麻古</a></li>
+									</ul>
+									<div class="wrap-box">
+										<p class="hover-content" data-id="1">
+											一沐日獨特的草仔粿與必推的粉粿吸引許多年輕網友；龜記則是以紅柚翡翠等果茶系列最多人點。
+										</p>
+										<p class="hover-content" data-id="2">
+											起家於中南部的老字號品牌大苑子，同樣以鮮果系列為主打，是不少7-8年級生的心頭好。
+										</p>
+										<p class="hover-content" data-id="3">
+											更往上年齡層偏愛的則有天仁、萬波等品牌。前者以913茶王、經典款的珍珠奶茶為熱賣；後者則以青茶、紅茶等品項最熱門。
+										</p>
+										<p class="hover-content" data-id="4">
+											50嵐、清心、麻古等品牌，則靠著分店數優勢，藉由易取得性較高、本身口味與選項齊全，相對較不受年齡層影響。
+										</p>
 									</div>
-									<p class="hover-content" data-id="2">
-										根據內政部統計，2022年全年人口數為2326萬4640人，六都按人口數排序下來，分別為新北市399萬5551人、台中市281萬4459人、高雄市272萬8137人、台北市248萬681人、桃園市228萬1464人以及台南市185萬2997人
-									</p>
-									<p class="hover-content" data-id="3">
-										可以放東西
-									</p>
-									<p class="hover-content" data-id="4">
-										可以放東西
-									</p>
 								</div>
-								<div class="dynamic-content" style="min-width:100%;" data-id="11">
+								
+								<div class="dynamic-content" style="min-width:100%;" data-id="12">
 									就品牌來說，普遍品牌的平均年齡都介於30~34歲之間，但還是能看出來「Soma」、「有飲」、「泰讚了」等品牌的客群年齡是比普遍低，皆不到30歲。
 而「天仁茗茶」、「阿娘喂！廖老大」、「武林茶」的客群年齡則比普遍高，客群年齡平均起來超過36歲。
 								</div>
@@ -1340,7 +1351,7 @@
 										<h2>消費熱門時段</h2>
 										<div class="flourish-embed flourish-chart mobile" data-id="11" data-src="visualisation/16416382"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div style="min-height:300px;">
-											12~13 午餐時段習慣來一杯、18~19 晚餐下班時段再來一杯。
+											從消費時間來看，多數人會選擇在 12~13 午餐時段來一杯(上班族的小確幸?)，或是於 18~19 晚餐下班時段來一杯(或再來一杯)。
 										</div>
 									</div>
 									<div class="col-md-12 col-md-offset-0 animate-box intro-heading dynamic-indicator" data-id="12">
@@ -1468,7 +1479,7 @@
 									<div class="col-md-12 col-md-offset-0 animate-box intro-heading dynamic-indicator" data-id="24">
 										<span>Toppings/Flavor preference(overall)</span>
 										<h2>熱門偏好風味/加料(整體)</h2>
-										<div class="flourish-embed flourish-chart mobile" data-id="24" data-src="visualisation/16213179"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+										<div class="flourish-embed flourish-chart mobile overflowy" data-id="24" data-src="visualisation/16213179"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 										<div style="min-height:300px;">
 											撇除純茶與純奶茶之外，台灣的手搖飲還要各式各樣豐富多元的種類、風味與多種配料。其中由各種豐富的水果味、果粒是最熱門的一群。
 											<br>
@@ -1526,7 +1537,7 @@
 											不同年齡層對於茶類的偏好差異並不算大，整體來說純茶的愛好者有偏高齡的趨勢；而紅茶與奶茶的愛好者則相對年輕。
 										</div>
 									</div>
-									<div class="dynamic-content" style="min-width:100%;" data-id="24">
+									<div class="dynamic-content overflowy" style="min-width:100%;" data-id="24">
 										<div class="flourish-embed flourish-chart" data-src="visualisation/16213179"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 									</div>
 								</div>
@@ -1708,7 +1719,7 @@
 									<h3>信箱: service@lndata.com</h3>
 									<h3>電話: (02)2394-8800</h3>
 								</blockquote>
-								<iframe width="100%" height="600px" src="https://www.surveycake.com/s/qWAz6"
+								<iframe width="100%" height="600px" src="https://www.surveycake.com/s/qZ0qL"
     style="border:#ddd 1px solid;" allowTransparency="true" frameborder="0"></iframe>
 							</div>
 						</div>
@@ -1719,10 +1730,6 @@
 	    <!-- End -->
 
 		
-
-
-		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  新的一塊開始囉  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-    	<!-- 這裡不用修改，可以給顧客額外服務，問他們有沒有什麼想放的話，或是座右銘，如沒有就不用動！ -->
 		<div id="colorlib-testimony">
 			<div class="container">
 				<div class="row text-center">
@@ -1768,7 +1775,7 @@
 								<div class="testimony">
 									<blockquote>
 										<p>"所以我說一沐日為什麼這麼難訂？"</p>
-										<span>&mdash; Doris</span>
+										<span>&mdash; Dora</span>
 									</blockquote>
 								</div>
 							</div>
@@ -1778,9 +1785,6 @@
 			</div>
 		</div>
 		<!-- End -->
-
-
-		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  新的一塊開始囉  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 		<footer>
 			<div id="footer">
