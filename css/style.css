@@ -5,12 +5,8 @@
   font-weight: normal;
   font-style: normal; }
 
-/* =======================================================
-*
-* 	Template Style 
-*	Edit this section
-*
-* ======================================================= */
+/* =======================================================*/
+
 body {
   font-family: "Karla", Arial, sans-serif;
   line-height: 1.8;
@@ -737,21 +733,6 @@ header {
       background: #CA82F8;
       color: #fff; }
 
-.btn-success {
-  background: #5cb85c;
-  color: #fff;
-  border: 2px solid #5cb85c; }
-  .btn-success:hover, .btn-success:focus, .btn-success:active {
-    background: #4cae4c !important;
-    border-color: #4cae4c !important; }
-  .btn-success.btn-outline {
-    background: transparent;
-    color: #5cb85c;
-    border: 2px solid #5cb85c; }
-    .btn-success.btn-outline:hover, .btn-success.btn-outline:focus, .btn-success.btn-outline:active {
-      background: #5cb85c;
-      color: #fff; }
-
 .btn-info {
   background: #5bc0de;
   color: #fff;
@@ -781,32 +762,6 @@ header {
     .btn-warning.btn-outline:hover, .btn-warning.btn-outline:focus, .btn-warning.btn-outline:active {
       background: #f0ad4e;
       color: #fff; }
-
-.btn-danger {
-  background: #d9534f;
-  color: #fff;
-  border: 2px solid #d9534f; }
-  .btn-danger:hover, .btn-danger:focus, .btn-danger:active {
-    background: #d43f3a !important;
-    border-color: #d43f3a !important; }
-  .btn-danger.btn-outline {
-    background: transparent;
-    color: #d9534f;
-    border: 2px solid #d9534f; }
-    .btn-danger.btn-outline:hover, .btn-danger.btn-outline:focus, .btn-danger.btn-outline:active {
-      background: #d9534f;
-      color: #fff; }
-
-.btn-outline {
-  background: none;
-  border: 2px solid gray;
-  font-size: 16px;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s; }
-  .btn-outline:hover, .btn-outline:focus, .btn-outline:active {
-    -webkit-box-shadow: none;
-    box-shadow: none; }
 
 .row-padded-bottom {
   margin-bottom: 4em; }
@@ -1362,7 +1317,6 @@ padding: 15px;
   
 
   .dynamic-content {
-    /* Add additional styling for dynamic content as needed */
     opacity: 0; /* Initially set opacity to 0 */
     transition: opacity 0.5s ease-in-out; /* Apply a transition effect on opacity */
     position: absolute;
@@ -1372,16 +1326,15 @@ padding: 15px;
     }
 
   .fade-in {
-    opacity: 1 !important; /* Ensure that opacity is set to 1 when the "fade-in" class is applied */
+    opacity: 1 !important;
     z-index:110 !important;
   }
 
   .fade-out {
-    opacity: 0 !important; /* Ensure that opacity is set to 1 when the "fade-in" class is applied */
+    opacity: 0 !important; 
   }
 
   .hover-indicator {
-    /* Style for hover indicators, adjust as needed */
     padding: 10px;
     margin-bottom: 10px;
     cursor: pointer;
@@ -1400,10 +1353,9 @@ padding: 15px;
     display: block;
     min-height: 20px;
     transition: all 0.5s ease-in-out;
-    /* Add additional styling for hover content as needed */
   }
 
-  /* Add hover effect */
+ 
   .hover-indicator:hover + .hover-content {
     display: block;
   }
@@ -1489,7 +1441,7 @@ header.show .normal-nav {
 }
 
 .icon {
-  font-family: 'Font Awesome 5 Free'; /* 修改为你实际使用的图标字体 */
+  font-family: 'Font Awesome 5 Free'; 
   font-size: 30px;
   margin: 0 10px;
   transition: color 0.4s ease-in-out;
@@ -1533,7 +1485,7 @@ header.show .normal-nav {
 
 #ticker {
   display: inline-block;
-  width: 100px; /* 调整宽度以适应最大的数字 */
+  width: 100px; 
   overflow: hidden;
 }
 
@@ -1598,11 +1550,11 @@ tr:hover {
 
   @media screen and (min-width: 768px) {
     ::-webkit-scrollbar {
-      width: 12px; /* 滚动条的宽度 */
+      width: 12px; 
     }
     
     ::-webkit-scrollbar-track {
-      background: rgba(255, 255, 255, 0.2); /* 滚动条轨道的背景色 */
+      background: rgba(255, 255, 255, 0.2);
     }
     
 
@@ -1613,7 +1565,7 @@ tr:hover {
     }
     
     ::-webkit-scrollbar-thumb:hover {
-      background: #555; /* 滚动条手柄的鼠标悬停时背景色 */
+      background: #555; 
     }
    }
 
@@ -1623,7 +1575,7 @@ tr:hover {
   }
 
   body {
-    overflow: hidden; /* 隐藏滚动条 */
+    overflow: hidden; 
   }
 
   .loader {
@@ -1658,7 +1610,7 @@ tr:hover {
     display: none ;
   }
   .content.show {
-    display: block !important; /* 使用 !important 来确保优先级 */
+    display: block !important; 
   }
 
  .loader span {
