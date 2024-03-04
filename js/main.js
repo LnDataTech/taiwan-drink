@@ -17,7 +17,6 @@
 	};
 
 	var loading = function() {
-		// 載入動畫
 		window.addEventListener('load', function() {
 		var loader = document.querySelector('.loader');
 		loader.style.display = 'none'; 
@@ -27,8 +26,8 @@
 	};
 
 	window.addEventListener('load', function() {
-		document.body.style.overflow = 'auto'; // 恢复滚动条
-		document.querySelector('.content').style.display = 'block'; // 显示网页内容
+		document.body.style.overflow = 'auto';
+		document.querySelector('.content').style.display = 'block'; 
 	  });
 
 	var fullHeight = function() {
@@ -58,7 +57,6 @@
 
 
 	// Animations
-
 	var contentWayPoint = function() {
 		var i = 0;
 		$('.animate-box').waypoint( function( direction ) {
@@ -194,8 +192,6 @@
 
 	window.addEventListener('scroll', function () {
 		var rightSide = document.getElementById('rightSide');
-		//var dynamicIndicator1 = document.getElementById('dynamicIndicator1');
-		//var dynamicIndicator2 = document.getElementById('dynamicIndicator2');
 		var dynamicIndicators = document.querySelectorAll('.dynamic-indicator');
 		var dynamicContents = document.querySelectorAll('.dynamic-content');
   
@@ -245,23 +241,18 @@
 		});
 	  });
 
-	  // 获取所有导航链接
 const navLinks = document.querySelectorAll('nav a');
 
-// 添加点击事件监听器
 navLinks.forEach(link => {
   link.addEventListener('click', smoothScroll);
 });
 
-// 平滑滚动函数
 function smoothScroll(e) {
   e.preventDefault();
   
-  // 获取目标部分的ID
   const targetId = this.getAttribute('href').substring(1);
   const targetSection = document.getElementById(targetId);
 
-  // 使用scrollIntoView进行平滑滚动
   targetSection.scrollIntoView({
     behavior: 'smooth'
   });
@@ -282,7 +273,6 @@ window.onscroll = function () {
   prevScrollPos = currentScrollPos;
 };
 
-// 當滑鼠移動到頂端附近時，顯示navbar
 window.addEventListener('mousemove', function (e) {
   if (e.clientY < 20) {
     nav.classList.add('show');
