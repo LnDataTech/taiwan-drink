@@ -1646,7 +1646,7 @@
 			</div>
 		</div> 
     
-		<div id="about-us">
+		<div id="about-us" style="padding-top:2rem;">
 			<div class="container">
 				<div class="row text-center">
 					<h2 class="bold">關於我們
@@ -1711,7 +1711,7 @@
 				</div>
 				<div class="col-md-12">
 					<div class="work-entry animate-box">
-						<div class="col-md-10 col-md-offset-1">
+						<div class="col-md-12 col-md-offset-1">
 							<div class="services animate-box">
 								<blockquote style="border-left: goldenrod solid 7px; border-radius: 5px; background-color: rgba(235, 235, 235, 0.4);">
 									<br>
@@ -1834,23 +1834,19 @@
 
 	<script>
 		function changeBrand() {
-	// 获取选择框的值
 	const selectedBrand = document.getElementById('brandSelect').value;
   
-	// 隐藏所有行
 	const allRows = document.querySelectorAll('#tableBody tr');
 	allRows.forEach(row => {
 	  row.style.display = 'none';
 	});
   
-	// 显示选定品牌的Top 3
 	const brandRows = document.querySelectorAll(`#${selectedBrand}Row1, #${selectedBrand}Row2, #${selectedBrand}Row3`);
 	brandRows.forEach(row => {
 	  row.style.display = '';
 	});
   }
   
-  // 初始加载时调用一次以显示默认品牌的Top 3
   document.addEventListener('DOMContentLoaded', changeBrand);
 	</script>
 
