@@ -1108,7 +1108,7 @@ p {
   text-align: justify;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 988px) {
   .cardo .face {
    border:1px solid #1a1a1a;
   }
@@ -1197,7 +1197,7 @@ p {
 .face .card-top {
   transition: all 0.6s ease-in-out;
   position: absolute;
-  top: 25%;
+  top: 24%;
   opacity: 1;
 }
 
@@ -1206,6 +1206,12 @@ p {
   transform: translateY(-190%);
   padding-top: 0%!important;
   opacity: 0;
+}
+
+@media screen and (max-width: 988px) {
+  .face .card-top  {
+    top: 20%;
+  }
 }
 
 .zoomimg {
@@ -1325,6 +1331,18 @@ padding: 15px;
     padding-right: 5%;
     min-width:100%
     }
+
+    .trouble {
+      padding-top:1%
+    }
+
+    @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+      .trouble  {
+        padding-top:15% !important;
+        }
+  }
+
+
 
   .fade-in {
     opacity: 1 !important;
