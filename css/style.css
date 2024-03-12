@@ -1323,8 +1323,8 @@ padding: 15px;
   
 
   .dynamic-content {
-    opacity: 0; /* Initially set opacity to 0 */
-    transition: opacity 0.5s ease-in-out; /* Apply a transition effect on opacity */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; 
     position: absolute;
     top:10%;
     padding-left:5%;
@@ -1341,8 +1341,6 @@ padding: 15px;
         padding-top:15% !important;
         }
   }
-
-
 
   .fade-in {
     opacity: 1 !important;
@@ -1423,7 +1421,6 @@ padding: 15px;
     color: #ffdd79;
   }
 
-  /* 隱藏navbar的動畫效果 */
 header.hide .normal-nav {
   opacity: 0% !important ;
   display:flex !important;
@@ -1432,8 +1429,6 @@ header.hide .normal-nav {
   transition: all .5s ease-in-out !important;
 }
 
-
-/* 顯示navbar的動畫效果 */
 header.show .normal-nav {
   opacity: 100% !important;
   transform: translateY(0);
