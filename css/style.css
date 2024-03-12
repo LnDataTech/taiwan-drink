@@ -1323,6 +1323,7 @@ padding: 15px;
     top:10%;
     padding-left:5%;
     padding-right: 5%;
+    min-width:100%
     }
 
   .fade-in {
@@ -1542,6 +1543,10 @@ tr:hover {
   #intro-box {
     padding-left: 5%;
   padding-right: 5%; }
+
+  #intro-text:hover {
+    padding: 10%;
+  }
 
   #dec-banner-g {
     transform: translateY(-40%);
