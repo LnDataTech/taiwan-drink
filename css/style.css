@@ -1278,6 +1278,11 @@ padding: 15px;
       .trouble  {
         padding-top:20% !important;
         }
+      
+      .col-md-12 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
   }
 
   .fade-in {
