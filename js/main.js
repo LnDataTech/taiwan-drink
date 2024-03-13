@@ -196,21 +196,17 @@
 		var dynamicContents = document.querySelectorAll('.dynamic-content');
   
 		dynamicIndicators.forEach(function (dynamicIndicator, index) {
-			// Get the current position of each dynamicIndicator
 			var rect = dynamicIndicator.getBoundingClientRect();
 	
-			// Calculate the threshold dynamically based on the dynamicIndicator's position
 			var scrollThreshold = rect.top;
 	
-			// Get the current scroll position
 			var scrollPosition = window.scrollY || document.documentElement.scrollTop;
 	
-			// Check if the scroll position is beyond the threshold for each dynamicIndicator
 			if (scrollThreshold < 100 && scrollThreshold > -300) {
-			  // Show the corresponding dynamic content
+
 			  dynamicContents[index].classList.add('fade-in');
 			} else {
-			  // Hide the corresponding dynamic content
+
 			  dynamicContents[index].classList.remove('fade-in');
 			}
 		  });
@@ -225,7 +221,6 @@
 			var dataId = indicator.getAttribute('data-id');
 			var correspondingContent = document.querySelector('.hover-content[data-id="' + dataId + '"]');
   
-			// Display the corresponding hover content
 			correspondingContent.classList.add('fade-in');
 			correspondingContent.classList.remove('fade-out');
 		  });
@@ -234,7 +229,6 @@
 			var dataId = indicator.getAttribute('data-id');
 			var correspondingContent = document.querySelector('.hover-content[data-id="' + dataId + '"]');
   
-			// Hide the corresponding hover content when mouse leaves
 			correspondingContent.classList.add('fade-out');
 			correspondingContent.classList.remove('fade-in');
 		  });

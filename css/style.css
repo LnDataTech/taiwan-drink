@@ -221,29 +221,6 @@ header {
   @media screen and (max-width: 768px) {
     header {
       padding: 2em 0; } }
-  header .colorlib-navbar-brand {
-    float: left; }
-    header .colorlib-navbar-brand .colorlib-logo {
-      font-size: 20px;
-      text-transform: uppercase;
-      color: #642f19      ;
-      font-weight: 400;
-      letter-spacing: 5px;
-      padding: 7px;
-      border: 1px solid #642f19      ;
-      display: block;
-      text-align: center;
-      background: #642f19    }
-      header .colorlib-navbar-brand .colorlib-logo span {
-        display: block;
-        margin-bottom: 0;
-        line-height: 1.2;
-        color: #fff; }
-      header .colorlib-navbar-brand .colorlib-logo:hover {
-        text-decoration: none !important; }
-      header .colorlib-navbar-brand .colorlib-logo:active, header .colorlib-navbar-brand .colorlib-logo:focus {
-        outline: none;
-        text-decoration: none; }
 
 #colorlib-services,
 #colorlib-contact,
@@ -294,45 +271,6 @@ header {
       width: 40px;
       height: 1px; }
 
-.about-desc {
-  padding-top: 2em; }
-  .about-desc h2 {
-    line-height: 1.3; }
-    .about-desc h2 span {
-      display: block;
-      margin-bottom: 0;
-      color: #000;
-      font-size: 50px;
-      font-family: "Playfair Display", Georgia, serif; }
-  .about-desc .desc {
-    padding-left: 6em;
-    position: relative; }
-  .about-desc .rotate {
-    position: absolute;
-    top: 7px;
-    left: 30px; }
-    .about-desc .rotate .heading {
-      font-family: "Karla", Arial, sans-serif;
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 1em;
-      -webkit-transform: rotate(90deg);
-      -moz-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-      -o-transform: rotate(90deg);
-      transform: rotate(90deg);
-      -webkit-transform-origin: left top 0;
-      -ms-transform-origin: left top 0;
-      transform-origin: left top 0;
-      position: relative; }
-      .about-desc .rotate .heading:after {
-        position: absolute;
-        top: 8px;
-        right: -40px;
-        content: '';
-        background: #000;
-        width: 40px;
-        height: 1px; }
 
 .bold {
   position: flex;
