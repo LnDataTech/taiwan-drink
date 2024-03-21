@@ -1271,7 +1271,8 @@ padding: 15px;
     }
 
     .trouble {
-      padding-top:1%
+      padding-top:1%;
+      transition: all 0.5s ease-in-out !important;
     }
 
     @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -1284,6 +1285,23 @@ padding: 15px;
         padding-right: 0 !important;
       }
   }
+
+  @media only screen and (min-device-width: 1024px) and (max-device-width: 1536px) and (-webkit-min-device-pixel-ratio: 2) {
+    .trouble  {
+      padding-top:25% !important;
+      position: absolute !important;
+      bottom: 5% !important;
+      }
+    
+    .trouble:hover {
+      transform: translateY(20%) !important;
+    }
+    
+    .col-md-12 {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+}
 
   .fade-in {
     opacity: 1 !important;
